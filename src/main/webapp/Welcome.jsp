@@ -32,7 +32,7 @@
  <form id="test" method="POST" action="">
       <Select name="Stations" size="1" id="Stations_List">
       <c:forEach items="${stationListBean.getListOfData()}" var="st">
-            <option value="1"><c:out value="${st.StationName}"/></option>
+            <option value="1"><c:out value="${st.getStationName()}"/></option>
       </c:forEach>
       </select>
       <br>
