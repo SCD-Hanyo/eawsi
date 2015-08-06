@@ -39,7 +39,7 @@
 
  	<form id="PopulateStationListLOV_form_id_01" method="POST" action="SelectStationServlet" name="PopulateStationListLOV_form_name_01">
  	     <Select name="StationsList_select_01" size="1" id="StationsList_select_01" onchange=" return PopulateStationListLOV_func_01 ();">   
-    	        <option value="0"><c:out value="Please Select a Station"/></option>
+    	        <option value="No_Station"><c:out value="Please Select a Station"/></option>
       			<c:forEach items="${stationListBean.getListOfData(sessionScope.organization)}" var="st">
             		<option 
             		value="${st.getStationID()}" 

@@ -35,12 +35,20 @@ public class SelectStationServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String formIndicator=request.getParameter("form_indicator_flag");
+		boolean stationSelectedFlag=true;
 		
 		if (formIndicator.equals("form_populate_station_list_LOV_01"))
 		{
-			boolean stationSelectedFlag=true;
 			String Selected_Station_ID=request.getParameter("selected_station_id");
-			request.getSession().setAttribute("selected_station_id", Selected_Station_ID);
+			if (Selected_Station_ID.equals("No_Station"))
+			{
+				stationSelectedFlag=false;
+			}
+			else
+			{
+				stationSelectedFlag=true;
+				request.getSession().setAttribute("selected_station_id", Selected_Station_ID);				
+			}
 			request.getSession().setAttribute("stationSelectedFlag", stationSelectedFlag);
 			response.sendRedirect("Welcome.jsp");
 		} 
