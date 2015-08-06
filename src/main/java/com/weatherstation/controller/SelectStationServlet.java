@@ -43,6 +43,7 @@ public class SelectStationServlet extends HttpServlet {
 			if (Selected_Station_ID.equals("No_Station"))
 			{
 				stationSelectedFlag=false;
+				request.getSession().setAttribute("selected_station_id", "No_Station");		
 			}
 			else
 			{
