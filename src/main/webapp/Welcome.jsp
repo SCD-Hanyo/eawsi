@@ -1,13 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <jsp:useBean id="stationListBean" scope="session" class="com.weatherstation.service.StationLOVPopulateService"/>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Welcome</title>
 </head>
 <body>
 <%/* *********************************************************** */ %>
@@ -19,29 +21,30 @@
 		<c:if test="${!loggedInFlag}">
 				<% response.sendRedirect("Login.jsp"); %>
 		</c:if>	
-<%/* *********************************************************** */ %>
-<!--   *************************************************************************** -->
-<%/* *********************************************************** */ %>
 <%/* include Banner.jsp in translation time, to ensure the username is dynamic */ %>
 		<jsp:include page="Banner.jsp" /> 
         <br>
 <%/* *********************************************************** */ %>
-<!--   *************************************************************************** -->
 
 
-	${sessionScope.organization}
+<script type="text/javascript">
+function PopulateStationListLOV_func_01(){
+document.getElementById("selected_station_id").value=document.getElementById("StationsList_select_01").value;
+document.PopulateStationListLOV_form_name_01.submit();
+return true;
+}
+</script>	
 
- <form id="test" method="POST" action="">
-      <Select name="Stations" size="1" id="Stations_List">
+ <form id="PopulateStationListLOV_form_id_01" method="POST" action="SelectStationServlet" name="PopulateStationListLOV_form_name_01">
+      <Select name="StationsList_select_01" size="1" id="StationsList_select_01" onchange=" return PopulateStationListLOV_func_01 ();">   
+            <option value="0"><c:out value="Please Select a Station:}"/></option>
       <c:forEach items="${stationListBean.getListOfData(sessionScope.organization)}" var="st">
             <option value="${st.getStationID()}"><c:out value="${st.getStationName()}"/></option>
       </c:forEach>
       </select>
-      <br>
-      <input type="Submit" name="cmdSub" value="SUBMIT">
-      <input type="Reset" name="cmdReset" value="RESET">
-    </form>
-
+      <input type="hidden" name="form_indicator_flag" value="form_populate_station_list_LOV_01" />
+      <input type="hidden" name="selected_station_id" id="selected_station_id">
+</form>
 
 
 
