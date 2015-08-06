@@ -28,7 +28,7 @@
 <%/* *********************************************************** */ %>
 <!--   *************************************************************************** -->
 
-<input type="hidden" name="UserOrg" value="${sessionScope.organization}">
+
 	${sessionScope.organization}
 
  <form id="test" method="POST" action="">

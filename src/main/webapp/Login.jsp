@@ -27,7 +27,7 @@
 			<h1 class="logintextclass">Welcome to the First Egyptian Weather Station
 			</h1> <br>
 			<h2 class="logintextclass">Designed,Implemented and Manufactured by  
-			<a href="http://www.shortcircuitdesigns.com">Short circuit Designs</a>
+			<a href="http://www.shortcircuitdesigns.com">Short Circuit Designs (SCD)</a>
 			</h2>
 			
 			<h2 class="logintextclass">Please enter your user name and password below:
