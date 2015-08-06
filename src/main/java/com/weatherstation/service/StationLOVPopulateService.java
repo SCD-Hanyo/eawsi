@@ -12,21 +12,18 @@ import com.weatherstation.util.HibernateUtil_Stations;
 public class StationLOVPopulateService {
 	
 
-	public List<Stations> getListOfData(){
-//		String Organization="3'ataty";
-	//public List<Stations> getListOfData(String Organization){
+	public List<Stations> getListOfData(String Organization){
 		 List<Stations> list = new ArrayList<Stations>();
 		 Session session = HibernateUtil_Stations.openSession();
 		 String query;
-//		 if (Organization.equalsIgnoreCase("SCD"))
-//		 {
-			 query="from Stations";
-			 
-//		 }
-//		 else
-//		 {
-//			 query="from Stations WHERE Organization like "+ Organization;			 
-//		 }
+		 if (Organization.equalsIgnoreCase("SCD"))
+		 {
+			 query="from Stations";			 
+		 }
+		 else
+		 {
+			 query="from Stations WHERE Organization like "+ Organization;			 
+		 }
 		 Transaction tx = null;	
 
 		 try {
