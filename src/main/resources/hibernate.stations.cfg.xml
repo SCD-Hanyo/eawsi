@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.url">jdbc:mysql://127.9.57.2:3306/weatherstations</property>
+		<property name="hibernate.connection.username">adminHlKiPSE</property>
+        <property name="hibernate.connection.password">MNmf9s8n24C6</property>
+        
+       	<!-- important to specify c3p0 as your connection provider -->
+        <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <!-- configuration for connection pool via c3p0 -->
+        <property name="c3p0.min_size">3</property>
+        <property name="c3p0.max_size">20</property>
+        <property name="c3p0.acquire_increment">1</property>
+        <property name="c3p0.max_statements">50</property>
+        <property name="c3p0.timeout">14400</property>
+        <property name="c3p0.idle_test_period">3600</property>       
+        <property name="hibernate.connection.provider_class">
+org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property>
+
+        <mapping class="com.weatherstation.model.Stations" />
+    </session-factory>
+</hibernate-configuration>
+     
