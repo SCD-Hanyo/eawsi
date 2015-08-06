@@ -41,14 +41,14 @@
  	     <Select name="StationsList_select_01" size="1" id="StationsList_select_01" onchange=" return PopulateStationListLOV_func_01 ();">   
     	        	<option 
     	        	value="No_Station"
-    	        	<c:if test="${selected_station_id eq st.getStationID()}">
+            		<c:if test="${selected_station_id eq 'No_Station'}">
         		 	selected="selected" 
         			</c:if>>    	        
         			<c:out value="Please Select a Station"/></option>
       			<c:forEach items="${stationListBean.getListOfData(sessionScope.organization)}" var="st">
             		<option 
             		value="${st.getStationID()}" 
-            		<c:if test="${selected_station_id eq 'No_Station'}">
+    	        	<c:if test="${selected_station_id eq st.getStationID()}">
         		 	selected="selected" 
         			</c:if>>
         			<c:out value="${st.getStationName()}"/></option>
@@ -56,8 +56,8 @@
       	</select>
        	<input type="hidden" name="form_indicator_flag" value="form_populate_station_list_LOV_01" /> 
       	<input type="hidden" name="selected_station_id" id="selected_station_id">
-      	<!-- the first one is the indicator for which form this is, I need to put this in all the forms and give them different values -->
-      	<!-- the second one is the variable that will hold the value selected from the LOV, and it will be set and submitted by the javascript -->
+      	<!-- the first input is the indicator for which form this is, I need to put this in all the forms and give them different values -->
+      	<!-- the second input is the variable that will hold the value selected from the LOV, and it will be set and submitted by the javascript -->
 </form>
 <!-- /Station By Org LOV population -->
 
