@@ -26,27 +26,37 @@
         <br>
 <%/* *********************************************************** */ %>
 
+<!-- Station By Org LOV population -->
+	<script type="text/javascript">
+	function PopulateStationListLOV_func_01(){
+	document.getElementById("selected_station_id").value=document.getElementById("StationsList_select_01").value;
+	document.PopulateStationListLOV_form_name_01.submit();
+	return true;
+	}
+	</script>	
 
-<script type="text/javascript">
-function PopulateStationListLOV_func_01(){
-document.getElementById("selected_station_id").value=document.getElementById("StationsList_select_01").value;
-document.PopulateStationListLOV_form_name_01.submit();
-return true;
-}
-</script>	
-
- <form id="PopulateStationListLOV_form_id_01" method="POST" action="SelectStationServlet" name="PopulateStationListLOV_form_name_01">
-      <Select name="StationsList_select_01" size="1" id="StationsList_select_01" onchange=" return PopulateStationListLOV_func_01 ();">   
-            <option value="0"><c:out value="Please Select a Station:}"/></option>
-      <c:forEach items="${stationListBean.getListOfData(sessionScope.organization)}" var="st">
-            <option value="${st.getStationID()}"><c:out value="${st.getStationName()}"/></option>
-      </c:forEach>
-      </select>
-      <input type="hidden" name="form_indicator_flag" value="form_populate_station_list_LOV_01" />
-      <input type="hidden" name="selected_station_id" id="selected_station_id">
+ 	<form id="PopulateStationListLOV_form_id_01" method="POST" action="SelectStationServlet" name="PopulateStationListLOV_form_name_01">
+ 	     <Select name="StationsList_select_01" size="1" id="StationsList_select_01" onchange=" return PopulateStationListLOV_func_01 ();">   
+    	        <option value="0"><c:out value="Please Select a Station"/></option>
+      			<c:forEach items="${stationListBean.getListOfData(sessionScope.organization)}" var="st">
+            		<option value="${st.getStationID()}"><c:out value="${st.getStationName()}"/></option>
+      			</c:forEach>
+      	</select>
+       	<input type="hidden" name="form_indicator_flag" value="form_populate_station_list_LOV_01" /> 
+      	<input type="hidden" name="selected_station_id" id="selected_station_id">
+      	<!-- the first one is the indicator for which form this is, I need to put this in all the forms and give them different values -->
+      	<!-- the second one is the variable that will hold the value selected from the LOV, and it will be set and submitted by the javascript -->
 </form>
+<!-- /Station By Org LOV population -->
 
-
+<c:choose>
+	<c:when test="${SelectedStation=='false'}">
+	No Station Selected
+	</c:when>
+	<c:otherwise>
+  Alex Station
+  	</c:otherwise>
+</c:choose>
 
 
 

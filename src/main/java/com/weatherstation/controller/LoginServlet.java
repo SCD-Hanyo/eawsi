@@ -54,6 +54,7 @@ public class LoginServlet extends HttpServlet {
 		
 		boolean foundFlag = loginService.FindUser(userName,passWord);
 		boolean tryAgainFlag= false;
+		boolean stationSelectedFlag=false;
 		if(foundFlag == true){
 			user=loginService.CheckDB(userName, passWord);
 			 request.getSession().setAttribute("currentUser", user.getUserName());
@@ -61,6 +62,8 @@ public class LoginServlet extends HttpServlet {
 			 request.getSession().setAttribute("role", user.getRole());
 			 request.getSession().setAttribute("loggedInFlag", foundFlag);
 			 request.getSession().setAttribute("tryAgainFlag", tryAgainFlag);
+				/*Clear all session flags*/
+			 request.getSession().setAttribute("stationSelectedFlag", stationSelectedFlag);
 			 response.sendRedirect("Welcome.jsp");
 		 }
 		 else{
