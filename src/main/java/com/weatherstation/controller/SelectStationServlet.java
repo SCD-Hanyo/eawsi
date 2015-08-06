@@ -40,6 +40,7 @@ public class SelectStationServlet extends HttpServlet {
 		{
 			boolean stationSelectedFlag=true;
 			String Selected_Station_ID=request.getParameter("selected_station_id");
+			request.getSession().setAttribute("selected_station_id", Selected_Station_ID);
 			request.getSession().setAttribute("stationSelectedFlag", stationSelectedFlag);
 			response.sendRedirect("Welcome.jsp");
 		} 
