@@ -28,7 +28,7 @@
 <%/* *********************************************************** */ %>
 <!--   *************************************************************************** -->
 
-<input type="text" name="UserOrg" value="${sessionScope.organization}" disabled="disabled">
+<input type="hidden" name="UserOrg" value="${sessionScope.organization}">
 ${UserOrg}
 
  <form id="test" method="POST" action="">
