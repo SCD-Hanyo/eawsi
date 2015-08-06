@@ -22,7 +22,7 @@ public class StationLOVPopulateService {
 		 }
 		 else
 		 {
-			 query="from Stations WHERE Organization like "+ Organization;			 
+			 query="from Stations WHERE Organization = "+ Organization;			 
 		 }
 		 Transaction tx = null;	
 
