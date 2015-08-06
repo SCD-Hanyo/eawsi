@@ -20,6 +20,7 @@ public class Stations implements Serializable {
 	@Id @GeneratedValue 
 	private String RecordIndex;
 	private String StationID;
+	private String Organization;
 	private String StationName;
 	private String Model;
 	private String Location;
@@ -136,8 +137,8 @@ public class Stations implements Serializable {
 
 
 
-	public Stations(String stationID, String stationName, String model,
-			String location, String latitude, String longitude,
+	public Stations(String stationID, String organization, String stationName,
+			String model, String location, String latitude, String longitude,
 			String altitude, String numberOfParams, String p01, String p02,
 			String p03, String p04, String p05, String p06, String p07,
 			String p08, String p09, String p10, String p11, String p12,
@@ -161,6 +162,7 @@ public class Stations implements Serializable {
 			String p98, String p99) {
 		super();
 		StationID = stationID;
+		Organization = organization;
 		StationName = stationName;
 		Model = model;
 		Location = location;
@@ -271,18 +273,6 @@ public class Stations implements Serializable {
 
 
 
-	public String getRecordIndex() {
-		return RecordIndex;
-	}
-
-
-
-	public void setRecordIndex(String recordIndex) {
-		RecordIndex = recordIndex;
-	}
-
-
-
 	public String getStationID() {
 		return StationID;
 	}
@@ -291,6 +281,18 @@ public class Stations implements Serializable {
 
 	public void setStationID(String stationID) {
 		StationID = stationID;
+	}
+
+
+
+	public String getOrganization() {
+		return Organization;
+	}
+
+
+
+	public void setOrganization(String organization) {
+		Organization = organization;
 	}
 
 
@@ -1564,7 +1566,9 @@ public class Stations implements Serializable {
 	public void setP99(String p99) {
 		P99 = p99;
 	}
-	
+
+
+
 	
 
 
