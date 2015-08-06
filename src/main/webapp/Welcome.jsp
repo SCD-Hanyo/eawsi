@@ -50,7 +50,7 @@
 <!-- /Station By Org LOV population -->
 
 <c:choose>
-	<c:when test="${SelectedStation=='false'}">
+	<c:when test="${stationSelectedFlag=='false'}">
 	No Station Selected
 	</c:when>
 	<c:otherwise>
