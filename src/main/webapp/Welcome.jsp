@@ -31,7 +31,7 @@
 
  <form id="test" method="POST" action="">
       <Select name="Stations" size="1" id="Stations_List">
-      <c:forEach items="${stationListBean.ListOfData(SCD)}" var="st">
+      <c:forEach items="${stationListBean.ListOfData()}" var="st">
             <option value="1"><c:out value="${st.StationName}"/></option>
       </c:forEach>
       </select>

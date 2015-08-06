@@ -12,7 +12,9 @@ import com.weatherstation.util.HibernateUtil_Stations;
 public class StationLOVPopulateService {
 	
 
-	public List<Stations> getListOfData(String Organization){
+	public List<Stations> getListOfData(){
+		String Organization="SCD";
+	//public List<Stations> getListOfData(String Organization){
 		 List<Stations> list = new ArrayList<Stations>();
 		 Session session = HibernateUtil_Stations.openSession();
 		 String query;
