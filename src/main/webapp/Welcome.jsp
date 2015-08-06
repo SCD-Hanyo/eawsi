@@ -29,11 +29,11 @@
 <!--   *************************************************************************** -->
 
 <input type="hidden" name="UserOrg" value="${sessionScope.organization}">
-${UserOrg}
+	${sessionScope.organization}
 
  <form id="test" method="POST" action="">
       <Select name="Stations" size="1" id="Stations_List">
-      <c:forEach items="${stationListBean.getListOfData(UserOrg)}" var="st">
+      <c:forEach items="${stationListBean.getListOfData(sessionScope.organization)}" var="st">
             <option value="${st.getStationID()}"><c:out value="${st.getStationName()}"/></option>
       </c:forEach>
       </select>
