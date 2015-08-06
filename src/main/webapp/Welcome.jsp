@@ -28,12 +28,12 @@
 <%/* *********************************************************** */ %>
 <!--   *************************************************************************** -->
 
-<input type="text" name="UserOrg" value="${sessionScope.organization}">
-${UserOrg }
+<input type="text" name="UserOrg" value="${sessionScope.organization}" disabled="disabled">
+${UserOrg}
 
  <form id="test" method="POST" action="">
       <Select name="Stations" size="1" id="Stations_List">
-      <c:forEach items="${stationListBean.getListOfData('UserOrg')}" var="st">
+      <c:forEach items="${stationListBean.getListOfData(UserOrg)}" var="st">
             <option value="${st.getStationID()}"><c:out value="${st.getStationName()}"/></option>
       </c:forEach>
       </select>
