@@ -66,145 +66,153 @@ public class GenerateTableService {
 	
 	public String GenerateTableHeadArrayMethod(String ID)
 	{
-		String Row1 = "<table width=\"85%\" border=\"1\" align=\"center\" cellpadding=\"1\" cellspacing=\"1\"> <thead>   <tr align=\"center\"> <th rowspan=\"2\">Date</th> <th rowspan=\"2\">Time</th>";
-		String Row2="</tr> <tr align=\"center\" valign=\"middle\">";
-		Stations station2=new Stations();
-		station2=FindStationByID(ID);
-
-		String [] ParameterDescriptionArray = new String [100];
-		ParameterDescriptionArray[0]=null;
-		ParameterDescriptionArray[1]=station2.getP01();
-		ParameterDescriptionArray[2]=station2.getP02();
-		ParameterDescriptionArray[3]=station2.getP03();
-		ParameterDescriptionArray[4]=station2.getP04();
-		ParameterDescriptionArray[5]=station2.getP05();
-		ParameterDescriptionArray[6]=station2.getP06();
-		ParameterDescriptionArray[7]=station2.getP07();
-		ParameterDescriptionArray[8]=station2.getP08();
-		ParameterDescriptionArray[9]=station2.getP09();
-		ParameterDescriptionArray[10]=station2.getP10();
-		ParameterDescriptionArray[11]=station2.getP11();
-		ParameterDescriptionArray[12]=station2.getP12();
-		ParameterDescriptionArray[13]=station2.getP13();
-		ParameterDescriptionArray[14]=station2.getP14();
-		ParameterDescriptionArray[15]=station2.getP15();
-		ParameterDescriptionArray[16]=station2.getP16();
-		ParameterDescriptionArray[17]=station2.getP17();
-		ParameterDescriptionArray[18]=station2.getP18();
-		ParameterDescriptionArray[19]=station2.getP19();
-		ParameterDescriptionArray[20]=station2.getP20();
-		ParameterDescriptionArray[21]=station2.getP21();
-		ParameterDescriptionArray[22]=station2.getP22();
-		ParameterDescriptionArray[23]=station2.getP23();
-		ParameterDescriptionArray[24]=station2.getP24();
-		ParameterDescriptionArray[25]=station2.getP25();
-		ParameterDescriptionArray[26]=station2.getP26();
-		ParameterDescriptionArray[27]=station2.getP27();
-		ParameterDescriptionArray[28]=station2.getP28();
-		ParameterDescriptionArray[29]=station2.getP29();
-		ParameterDescriptionArray[30]=station2.getP30();
-		ParameterDescriptionArray[31]=station2.getP31();
-		ParameterDescriptionArray[32]=station2.getP32();
-		ParameterDescriptionArray[33]=station2.getP33();
-		ParameterDescriptionArray[34]=station2.getP34();
-		ParameterDescriptionArray[35]=station2.getP35();
-		ParameterDescriptionArray[36]=station2.getP36();
-		ParameterDescriptionArray[37]=station2.getP37();
-		ParameterDescriptionArray[38]=station2.getP38();
-		ParameterDescriptionArray[39]=station2.getP39();
-		ParameterDescriptionArray[40]=station2.getP40();
-		ParameterDescriptionArray[41]=station2.getP41();
-		ParameterDescriptionArray[42]=station2.getP42();
-		ParameterDescriptionArray[43]=station2.getP43();
-		ParameterDescriptionArray[44]=station2.getP44();
-		ParameterDescriptionArray[45]=station2.getP45();
-		ParameterDescriptionArray[46]=station2.getP46();
-		ParameterDescriptionArray[47]=station2.getP47();
-		ParameterDescriptionArray[48]=station2.getP48();
-		ParameterDescriptionArray[49]=station2.getP49();
-		ParameterDescriptionArray[50]=station2.getP50();
-		ParameterDescriptionArray[51]=station2.getP51();
-		ParameterDescriptionArray[52]=station2.getP52();
-		ParameterDescriptionArray[53]=station2.getP53();
-		ParameterDescriptionArray[54]=station2.getP54();
-		ParameterDescriptionArray[55]=station2.getP55();
-		ParameterDescriptionArray[56]=station2.getP56();
-		ParameterDescriptionArray[57]=station2.getP57();
-		ParameterDescriptionArray[58]=station2.getP58();
-		ParameterDescriptionArray[59]=station2.getP59();
-		ParameterDescriptionArray[60]=station2.getP60();
-		ParameterDescriptionArray[61]=station2.getP61();
-		ParameterDescriptionArray[62]=station2.getP62();
-		ParameterDescriptionArray[63]=station2.getP63();
-		ParameterDescriptionArray[64]=station2.getP64();
-		ParameterDescriptionArray[65]=station2.getP65();
-		ParameterDescriptionArray[66]=station2.getP66();
-		ParameterDescriptionArray[67]=station2.getP67();
-		ParameterDescriptionArray[68]=station2.getP68();
-		ParameterDescriptionArray[69]=station2.getP69();
-		ParameterDescriptionArray[70]=station2.getP70();
-		ParameterDescriptionArray[71]=station2.getP71();
-		ParameterDescriptionArray[72]=station2.getP72();
-		ParameterDescriptionArray[73]=station2.getP73();
-		ParameterDescriptionArray[74]=station2.getP74();
-		ParameterDescriptionArray[75]=station2.getP75();
-		ParameterDescriptionArray[76]=station2.getP76();
-		ParameterDescriptionArray[77]=station2.getP77();
-		ParameterDescriptionArray[78]=station2.getP78();
-		ParameterDescriptionArray[79]=station2.getP79();
-		ParameterDescriptionArray[80]=station2.getP80();
-		ParameterDescriptionArray[81]=station2.getP81();
-		ParameterDescriptionArray[82]=station2.getP82();
-		ParameterDescriptionArray[83]=station2.getP83();
-		ParameterDescriptionArray[84]=station2.getP84();
-		ParameterDescriptionArray[85]=station2.getP85();
-		ParameterDescriptionArray[86]=station2.getP86();
-		ParameterDescriptionArray[87]=station2.getP87();
-		ParameterDescriptionArray[88]=station2.getP88();
-		ParameterDescriptionArray[89]=station2.getP89();
-		ParameterDescriptionArray[90]=station2.getP90();
-		ParameterDescriptionArray[91]=station2.getP91();
-		ParameterDescriptionArray[92]=station2.getP92();
-		ParameterDescriptionArray[93]=station2.getP93();
-		ParameterDescriptionArray[94]=station2.getP94();
-		ParameterDescriptionArray[95]=station2.getP95();
-		ParameterDescriptionArray[96]=station2.getP96();
-		ParameterDescriptionArray[97]=station2.getP97();
-		ParameterDescriptionArray[98]=station2.getP98();
-		ParameterDescriptionArray[99]=station2.getP99();
-
-		String [] Next01_Split = new String [4];
-		String [] Next02_Split = new String [4];
-		String NumberofParamsString=station2.getNumberOfParams();
-		int NumberofParamsInt= Integer.parseInt(NumberofParamsString);
-		
-		for ( char loopcntr=1;loopcntr<=NumberofParamsInt;loopcntr++)
+		if (ID !=null)
 		{
-			if (((ParameterDescriptionArray[loopcntr])!=null))
+			
+			String Row1 = "<table width=\"85%\" border=\"1\" align=\"center\" cellpadding=\"1\" cellspacing=\"1\"> <thead>   <tr align=\"center\"> <th rowspan=\"2\">Date</th> <th rowspan=\"2\">Time</th>";
+			String Row2="</tr> <tr align=\"center\" valign=\"middle\">";
+			Stations station2=new Stations();
+			station2=FindStationByID(ID);
+	
+			String [] ParameterDescriptionArray = new String [100];
+			ParameterDescriptionArray[0]=null;
+			ParameterDescriptionArray[1]=station2.getP01();
+			ParameterDescriptionArray[2]=station2.getP02();
+			ParameterDescriptionArray[3]=station2.getP03();
+			ParameterDescriptionArray[4]=station2.getP04();
+			ParameterDescriptionArray[5]=station2.getP05();
+			ParameterDescriptionArray[6]=station2.getP06();
+			ParameterDescriptionArray[7]=station2.getP07();
+			ParameterDescriptionArray[8]=station2.getP08();
+			ParameterDescriptionArray[9]=station2.getP09();
+			ParameterDescriptionArray[10]=station2.getP10();
+			ParameterDescriptionArray[11]=station2.getP11();
+			ParameterDescriptionArray[12]=station2.getP12();
+			ParameterDescriptionArray[13]=station2.getP13();
+			ParameterDescriptionArray[14]=station2.getP14();
+			ParameterDescriptionArray[15]=station2.getP15();
+			ParameterDescriptionArray[16]=station2.getP16();
+			ParameterDescriptionArray[17]=station2.getP17();
+			ParameterDescriptionArray[18]=station2.getP18();
+			ParameterDescriptionArray[19]=station2.getP19();
+			ParameterDescriptionArray[20]=station2.getP20();
+			ParameterDescriptionArray[21]=station2.getP21();
+			ParameterDescriptionArray[22]=station2.getP22();
+			ParameterDescriptionArray[23]=station2.getP23();
+			ParameterDescriptionArray[24]=station2.getP24();
+			ParameterDescriptionArray[25]=station2.getP25();
+			ParameterDescriptionArray[26]=station2.getP26();
+			ParameterDescriptionArray[27]=station2.getP27();
+			ParameterDescriptionArray[28]=station2.getP28();
+			ParameterDescriptionArray[29]=station2.getP29();
+			ParameterDescriptionArray[30]=station2.getP30();
+			ParameterDescriptionArray[31]=station2.getP31();
+			ParameterDescriptionArray[32]=station2.getP32();
+			ParameterDescriptionArray[33]=station2.getP33();
+			ParameterDescriptionArray[34]=station2.getP34();
+			ParameterDescriptionArray[35]=station2.getP35();
+			ParameterDescriptionArray[36]=station2.getP36();
+			ParameterDescriptionArray[37]=station2.getP37();
+			ParameterDescriptionArray[38]=station2.getP38();
+			ParameterDescriptionArray[39]=station2.getP39();
+			ParameterDescriptionArray[40]=station2.getP40();
+			ParameterDescriptionArray[41]=station2.getP41();
+			ParameterDescriptionArray[42]=station2.getP42();
+			ParameterDescriptionArray[43]=station2.getP43();
+			ParameterDescriptionArray[44]=station2.getP44();
+			ParameterDescriptionArray[45]=station2.getP45();
+			ParameterDescriptionArray[46]=station2.getP46();
+			ParameterDescriptionArray[47]=station2.getP47();
+			ParameterDescriptionArray[48]=station2.getP48();
+			ParameterDescriptionArray[49]=station2.getP49();
+			ParameterDescriptionArray[50]=station2.getP50();
+			ParameterDescriptionArray[51]=station2.getP51();
+			ParameterDescriptionArray[52]=station2.getP52();
+			ParameterDescriptionArray[53]=station2.getP53();
+			ParameterDescriptionArray[54]=station2.getP54();
+			ParameterDescriptionArray[55]=station2.getP55();
+			ParameterDescriptionArray[56]=station2.getP56();
+			ParameterDescriptionArray[57]=station2.getP57();
+			ParameterDescriptionArray[58]=station2.getP58();
+			ParameterDescriptionArray[59]=station2.getP59();
+			ParameterDescriptionArray[60]=station2.getP60();
+			ParameterDescriptionArray[61]=station2.getP61();
+			ParameterDescriptionArray[62]=station2.getP62();
+			ParameterDescriptionArray[63]=station2.getP63();
+			ParameterDescriptionArray[64]=station2.getP64();
+			ParameterDescriptionArray[65]=station2.getP65();
+			ParameterDescriptionArray[66]=station2.getP66();
+			ParameterDescriptionArray[67]=station2.getP67();
+			ParameterDescriptionArray[68]=station2.getP68();
+			ParameterDescriptionArray[69]=station2.getP69();
+			ParameterDescriptionArray[70]=station2.getP70();
+			ParameterDescriptionArray[71]=station2.getP71();
+			ParameterDescriptionArray[72]=station2.getP72();
+			ParameterDescriptionArray[73]=station2.getP73();
+			ParameterDescriptionArray[74]=station2.getP74();
+			ParameterDescriptionArray[75]=station2.getP75();
+			ParameterDescriptionArray[76]=station2.getP76();
+			ParameterDescriptionArray[77]=station2.getP77();
+			ParameterDescriptionArray[78]=station2.getP78();
+			ParameterDescriptionArray[79]=station2.getP79();
+			ParameterDescriptionArray[80]=station2.getP80();
+			ParameterDescriptionArray[81]=station2.getP81();
+			ParameterDescriptionArray[82]=station2.getP82();
+			ParameterDescriptionArray[83]=station2.getP83();
+			ParameterDescriptionArray[84]=station2.getP84();
+			ParameterDescriptionArray[85]=station2.getP85();
+			ParameterDescriptionArray[86]=station2.getP86();
+			ParameterDescriptionArray[87]=station2.getP87();
+			ParameterDescriptionArray[88]=station2.getP88();
+			ParameterDescriptionArray[89]=station2.getP89();
+			ParameterDescriptionArray[90]=station2.getP90();
+			ParameterDescriptionArray[91]=station2.getP91();
+			ParameterDescriptionArray[92]=station2.getP92();
+			ParameterDescriptionArray[93]=station2.getP93();
+			ParameterDescriptionArray[94]=station2.getP94();
+			ParameterDescriptionArray[95]=station2.getP95();
+			ParameterDescriptionArray[96]=station2.getP96();
+			ParameterDescriptionArray[97]=station2.getP97();
+			ParameterDescriptionArray[98]=station2.getP98();
+			ParameterDescriptionArray[99]=station2.getP99();
+	
+			String [] Next01_Split = new String [4];
+			String [] Next02_Split = new String [4];
+			String NumberofParamsString=station2.getNumberOfParams();
+			int NumberofParamsInt= Integer.parseInt(NumberofParamsString);
+			
+			for ( char loopcntr=1;loopcntr<=NumberofParamsInt;loopcntr++)
 			{
-				String [] ParameterDescriptionArray_SplitArray = (ParameterDescriptionArray[loopcntr]).split(",");
-				if (ParameterDescriptionArray_SplitArray[2].equalsIgnoreCase("3"))
+				if (((ParameterDescriptionArray[loopcntr])!=null))
 				{
-					String Next01=ParameterDescriptionArray[loopcntr+1];
-					String Next02=ParameterDescriptionArray[loopcntr+2];
-
-					Next01_Split = Next01.split(",");
-					Next02_Split = Next02.split(",");				
-					Row1+="<th colspan=\"3\">"+ParameterDescriptionArray_SplitArray[0]+"</th>";
-					Row2+="<th>"+ParameterDescriptionArray_SplitArray[3]+"</th> <th>"+Next01_Split[3]+"</th><th>"+Next02_Split[3]+"</th>";
-					loopcntr+=2;
+					String [] ParameterDescriptionArray_SplitArray = (ParameterDescriptionArray[loopcntr]).split(",");
+					if (ParameterDescriptionArray_SplitArray[2].equalsIgnoreCase("3"))
+					{
+						String Next01=ParameterDescriptionArray[loopcntr+1];
+						String Next02=ParameterDescriptionArray[loopcntr+2];
+	
+						Next01_Split = Next01.split(",");
+						Next02_Split = Next02.split(",");				
+						Row1+="<th colspan=\"3\">"+ParameterDescriptionArray_SplitArray[0]+"</th>";
+						Row2+="<th>"+ParameterDescriptionArray_SplitArray[3]+"</th> <th>"+Next01_Split[3]+"</th><th>"+Next02_Split[3]+"</th>";
+						loopcntr+=2;
+					}
+					else
+					{
+						Row1+="<th rowspan=\"2\">"+ParameterDescriptionArray_SplitArray[0]+"</th>";
+					}
 				}
 				else
-				{
-					Row1+="<th rowspan=\"2\">"+ParameterDescriptionArray_SplitArray[0]+"</th>";
+				{  
+					break;
 				}
 			}
-			else
-			{  
-				break;
-			}
+			return Row1+Row2+"</tr>	</thead>";
 		}
-		return Row1+Row2+"</tr>	</thead>";
+		else
+		{
+			return "";
+		}
 	}
 	
 	public String GenerateTableBodyArrayMethod(String ID)
