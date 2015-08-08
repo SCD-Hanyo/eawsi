@@ -69,8 +69,9 @@ public class LoginServlet extends HttpServlet {
 		 }
 		 else{
 			 tryAgainFlag=true;
-			 request.getSession().setAttribute("loggedInFlag", foundFlag);
+			 request.getSession().setAttribute("loggedInFlag", "false");
 			 request.getSession().setAttribute("tryAgainFlag", tryAgainFlag);
+			 request.getSession().setAttribute("stationSelectedFlag", stationSelectedFlag);
 			 response.sendRedirect("Login.jsp");
 		 }
 		
