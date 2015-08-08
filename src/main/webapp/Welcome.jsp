@@ -74,10 +74,9 @@
 
 <c:choose>
 	<c:when test="${stationSelectedFlag=='false'}">
-	No Station Selected
 	</c:when>
 	<c:otherwise>
-  <br>  
+	  <br>  
   <%
     GenerateTableService Gen2= new GenerateTableService ();
     out.println(Gen2.GenerateTableHeadArrayMethod((String)(session.getAttribute("selected_station_id"))));  
