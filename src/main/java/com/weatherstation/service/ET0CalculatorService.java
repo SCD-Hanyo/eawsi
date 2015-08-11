@@ -5393,7 +5393,7 @@ public class ET0CalculatorService {
 	
 	double calc_ET0_fromParams(double min_Temp_in_C, double max_Temp_in_C,
 			double mean_WS_in_MeterPerSec,
-			double total_SR_in_WattPerMeterSquare, double latitude_in_Degrees,
+			double total_SR_in_MegaJoulePerMeterSquare, double latitude_in_Degrees,
 			double elevation_in_Meters, double min_Hum_in_Percent,
 			double max_Hum_in_Percent, int julian_Day) {
 		// min is the min of the min readings for the day
@@ -5405,7 +5405,7 @@ public class ET0CalculatorService {
 		// Main Parameters
 
 		double latitude_in_Rads = Math.toRadians(latitude_in_Degrees);
-		double total_SR_in_WattPerMeterSquare_Per_SolarDay = total_SR_in_WattPerMeterSquare;
+		double total_SR_in_MegaJoulePerMeterSquare_Per_SolarDay = total_SR_in_MegaJoulePerMeterSquare;
 		double dr = (1 + (0.033 * (Math.cos(2 * Math.PI * julian_Day / 365))));
 		double delta = (0.409 * (Math
 				.sin((2 * Math.PI * julian_Day / 365) - 1.39)));
@@ -5416,8 +5416,8 @@ public class ET0CalculatorService {
 				.cos(latitude_in_Rads) * Math.cos(delta) * Math.sin(omegas)))));
 		double Rso = Ra_in_Mega_Joule_per_meter2_per_Day
 				* (0.75 + (elevation_in_Meters * 0.00002));
-		double Rns = 0.77 * total_SR_in_WattPerMeterSquare_Per_SolarDay;
-		double f = (1.35 * total_SR_in_WattPerMeterSquare_Per_SolarDay / Rso) - (0.35);
+		double Rns = 0.77 * total_SR_in_MegaJoulePerMeterSquare_Per_SolarDay;
+		double f = (1.35 * total_SR_in_MegaJoulePerMeterSquare_Per_SolarDay / Rso) - (0.35);
 		double esx = 0.6108 * Math
 				.exp((17.27 * max_Temp_in_C / (max_Temp_in_C + 237.3)));
 		double esn = 0.6108 * Math
@@ -5458,3 +5458,4 @@ public class ET0CalculatorService {
 	}
 
 }
+
