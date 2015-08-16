@@ -14,11 +14,11 @@ public class HandleQSService {
 			{
 				if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
 				{
-//					input=Calculate_AT_SHT_Avg(input);
+					input=Calculate_AT_SHT_Avg(input);
 				}
 				else
 				{
-//					input=Calculate_AT_SHT(input);
+					input=Calculate_AT_SHT(input);
 					
 				}
 				
@@ -27,18 +27,18 @@ public class HandleQSService {
 			{
 				if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
 				{
-//					input=Calculate_AH_SHT_Avg(input);				
+					input=Calculate_AH_SHT_Avg(input);				
 				}
 				else
 				{
-//					input=Calculate_AH_SHT(input);				
+					input=Calculate_AH_SHT(input);				
 					
 				}
 				
 			}
 			else if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Solar Radiation"))
 			{
-//				input=Calculate_SR_Apogee(input);				
+				input=Calculate_SR_Apogee(input);				
 				
 			}
 		}
