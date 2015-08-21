@@ -88,8 +88,9 @@ public class HandleQSService {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{			
-			double inputdouble=Double.parseDouble(input);
-			double outputdouble=inputdouble/10;
+			double inputdouble=Double.parseDouble(input);			
+			double outputdouble;
+			inputdouble/=10;
 			outputdouble= (((125*inputdouble))/(Math.pow(2, 16))-6);
 			outputdouble=((double)Math.round(outputdouble * 100) / 100);
 			String output=String.valueOf(outputdouble);
@@ -122,7 +123,8 @@ public class HandleQSService {
 		if (SingleValueNumeric==true)
 		{			
 			double inputdouble=Double.parseDouble(input);
-			double outputdouble=inputdouble/10;
+			double outputdouble;
+			inputdouble/=10;
 			outputdouble= (((175.72*inputdouble))/(Math.pow(2, 16))-46.85);
 			outputdouble=((double)Math.round(outputdouble * 100) / 100);
 			String output=String.valueOf(outputdouble);
