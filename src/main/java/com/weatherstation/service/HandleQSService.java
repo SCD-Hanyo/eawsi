@@ -72,8 +72,8 @@ public class HandleQSService {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{			
-			int inputInt=Integer.parseInt(input);
-			double outputdouble= (((125*inputInt))/(Math.pow(2, 16))-6);
+			double inputdouble=Double.parseDouble(input);
+			double outputdouble= (((125*inputdouble))/(Math.pow(2, 16))-6);
 			outputdouble=((double)Math.round(outputdouble * 100) / 100);
 			String output=String.valueOf(outputdouble);
 			return output;
@@ -88,9 +88,9 @@ public class HandleQSService {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{			
-			int inputInt=Integer.parseInt(input);
-			double outputdouble=inputInt/10;
-			outputdouble= (((125*inputInt))/(Math.pow(2, 16))-6);
+			double inputdouble=Double.parseDouble(input);
+			double outputdouble=inputdouble/10;
+			outputdouble= (((125*inputdouble))/(Math.pow(2, 16))-6);
 			outputdouble=((double)Math.round(outputdouble * 100) / 100);
 			String output=String.valueOf(outputdouble);
 			return output;
@@ -105,8 +105,8 @@ public class HandleQSService {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{			
-			int inputInt=Integer.parseInt(input);
-			double outputdouble= (((175.72*inputInt))/(Math.pow(2, 16))-46.85);
+			double inputdouble=Double.parseDouble(input);
+			double outputdouble= (((175.72*inputdouble))/(Math.pow(2, 16))-46.85);
 			outputdouble=((double)Math.round(outputdouble * 100) / 100);
 			String output=String.valueOf(outputdouble);
 			return output;
@@ -121,9 +121,9 @@ public class HandleQSService {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{			
-			int inputInt=Integer.parseInt(input);
-			double outputdouble=inputInt/10;
-			outputdouble= (((175.72*inputInt))/(Math.pow(2, 16))-46.85);
+			double inputdouble=Double.parseDouble(input);
+			double outputdouble=inputdouble/10;
+			outputdouble= (((175.72*inputdouble))/(Math.pow(2, 16))-46.85);
 			outputdouble=((double)Math.round(outputdouble * 100) / 100);
 			String output=String.valueOf(outputdouble);
 			return output;
