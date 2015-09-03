@@ -253,7 +253,6 @@ public class UpdateServlet extends HttpServlet {
 			ParameterDescriptionArray[98]=station.getP98();
 			ParameterDescriptionArray[99]=station.getP99();
 			
-			
 			date="20"+date.substring(0,2)+"-"+date.substring(2,4)+"-"+date.substring(4);
 			time=time.substring(0,2)+":"+time.substring(2);
 			
@@ -261,7 +260,7 @@ public class UpdateServlet extends HttpServlet {
 			{
 				if(ParameterDescriptionArray[loopcntr]!=null)
 				{
-					String [] ParameterDescriptionArray_SplitArray = (ParameterDescriptionArray[1]).split(",");
+					String [] ParameterDescriptionArray_SplitArray = (ParameterDescriptionArray[loopcntr]).split(",");
 			
 					if (!(ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("D")))  // if it is not a display parameter
 					{
@@ -295,7 +294,7 @@ public class UpdateServlet extends HttpServlet {
 						}
 						/*End of SHT-15 section*/
 						/*SHT-25 section*/
-						if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("SHT-25")))
+						else if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("SHT-25")))
 						{
 							if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Air Temperature"))
 							{
@@ -323,7 +322,10 @@ public class UpdateServlet extends HttpServlet {
 						/*End of SHT-25 section*/
 						
 						/*Other Sensors*/
-						QSParam[loopcntr]=handle.UpdateParam(QSParam[loopcntr],ParameterDescriptionArray[loopcntr]);
+						else
+						{
+							QSParam[loopcntr]=handle.UpdateParam(QSParam[loopcntr],ParameterDescriptionArray[loopcntr]);
+						}
 					}
 				}
 			}

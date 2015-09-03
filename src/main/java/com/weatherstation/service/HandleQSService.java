@@ -4,9 +4,6 @@ public class HandleQSService {
 
 	public String UpdateParam (String input,String description)
 	{
-		System.out.println(input);
-		System.out.println(description);
-
 		String [] ParameterDescriptionArray_SplitArray = description.split(",");
 		if (ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("C"))
 		{
@@ -149,7 +146,7 @@ public class HandleQSService {
 		}		
 	}
 	
-	public String Calculate_AH_SHT15_Avg(String input,String TempInCelString) {
+	public String Calculate_AH_SHT15_Avg(String input,String TempInCelString) {				
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{			
