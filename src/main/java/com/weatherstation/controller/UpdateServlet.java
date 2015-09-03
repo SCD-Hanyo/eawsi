@@ -35,8 +35,10 @@ public class UpdateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		int loopcntr=0;
-		String SHT15_temperature_buffer="0";
+		String SHT15_temperature_min_buffer="0";
 		String SHT15_temperature_avg_buffer="0";
+		String SHT15_temperature_max_buffer="0";
+		
 		String ID= request.getParameter("ID");
 		String date = request.getParameter("Date");
 		String time = request.getParameter("Time");
@@ -277,7 +279,10 @@ public class UpdateServlet extends HttpServlet {
 								else
 								{
 									QSParam[loopcntr]=handle.Calculate_AT_SHT15(QSParam[loopcntr]);
-									SHT15_temperature_buffer=QSParam[loopcntr];									
+									if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Min"))
+									SHT15_temperature_min_buffer=QSParam[loopcntr];									
+									if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Max"))
+									SHT15_temperature_max_buffer=QSParam[loopcntr];									
 								}
 							}							
 							else if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Air Humidity"))
@@ -288,7 +293,10 @@ public class UpdateServlet extends HttpServlet {
 								}
 								else
 								{									
-									QSParam[loopcntr]=handle.Calculate_AH_SHT15(QSParam[loopcntr], SHT15_temperature_buffer);
+									if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Min"))
+									QSParam[loopcntr]=handle.Calculate_AH_SHT15(QSParam[loopcntr], SHT15_temperature_min_buffer);								
+									if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Max"))
+									QSParam[loopcntr]=handle.Calculate_AH_SHT15(QSParam[loopcntr], SHT15_temperature_max_buffer);																	
 								}
 							}							
 						}
