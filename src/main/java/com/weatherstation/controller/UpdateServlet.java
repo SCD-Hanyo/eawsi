@@ -35,6 +35,8 @@ public class UpdateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		int loopcntr=0;
+		String SHT15_temperature_buffer="0";
+		String SHT15_temperature_avg_buffer="0";
 		String ID= request.getParameter("ID");
 		String date = request.getParameter("Date");
 		String time = request.getParameter("Time");
@@ -261,9 +263,67 @@ public class UpdateServlet extends HttpServlet {
 				{
 					String [] ParameterDescriptionArray_SplitArray = (ParameterDescriptionArray[1]).split(",");
 			
-					if (!(ParameterDescriptionArray_SplitArray[1].equals("D")))
+					if (!(ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("D")))  // if it is not a display parameter
 					{
-					QSParam[loopcntr]=handle.UpdateParam(QSParam[loopcntr],ParameterDescriptionArray[loopcntr]);
+						/*SHT-15 section*/
+						if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("SHT-15")))
+						{
+							if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Air Temperature"))
+							{
+								if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
+								{
+									QSParam[loopcntr]=handle.Calculate_AT_SHT15_Avg(QSParam[loopcntr]);
+									SHT15_temperature_avg_buffer=QSParam[loopcntr];
+								}
+								else
+								{
+									QSParam[loopcntr]=handle.Calculate_AT_SHT15(QSParam[loopcntr]);
+									SHT15_temperature_buffer=QSParam[loopcntr];									
+								}
+							}							
+							else if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Air Humidity"))
+							{
+								if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
+								{
+									QSParam[loopcntr]=handle.Calculate_AH_SHT15_Avg(QSParam[loopcntr], SHT15_temperature_avg_buffer);
+								}
+								else
+								{									
+									QSParam[loopcntr]=handle.Calculate_AH_SHT15(QSParam[loopcntr], SHT15_temperature_buffer);
+								}
+							}							
+						}
+						/*End of SHT-15 section*/
+						/*SHT-25 section*/
+						if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("SHT-25")))
+						{
+							if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Air Temperature"))
+							{
+								if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
+								{
+									QSParam[loopcntr]=handle.Calculate_AT_SHT25_Avg(QSParam[loopcntr]);
+								}
+								else
+								{									
+									QSParam[loopcntr]=handle.Calculate_AT_SHT25(QSParam[loopcntr]);
+								}
+							}							
+							else if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Air Humidity"))
+							{
+								if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
+								{
+									QSParam[loopcntr]=handle.Calculate_AH_SHT25_Avg(QSParam[loopcntr]);
+								}
+								else
+								{									
+									QSParam[loopcntr]=handle.Calculate_AH_SHT25(QSParam[loopcntr]);
+								}
+							}							
+						}
+						/*End of SHT-25 section*/
+						
+						/*Other Sensors*/
+						QSParam[loopcntr]=handle.UpdateParam(QSParam[loopcntr],ParameterDescriptionArray[loopcntr]);
 					}
 				}
 			}
