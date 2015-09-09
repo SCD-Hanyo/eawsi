@@ -215,13 +215,15 @@ public class GenerateTableService {
 	
 						Next01_Split = Next01.split(",");
 						Next02_Split = Next02.split(",");				
-						Row1+="<th colspan=\"3\">"+ParameterDescriptionArray_SplitArray[0]+"</th>";
+						Row1+="<th colspan=\"3\">"+ParameterDescriptionArray_SplitArray[0];
+						Row1+="<br>["+ParameterDescriptionArray_SplitArray[4]+"]</th>";
 						Row2+="<th>"+ParameterDescriptionArray_SplitArray[3]+"</th> <th>"+Next01_Split[3]+"</th><th>"+Next02_Split[3]+"</th>";
 						loopcntr+=2;
 					}
 					else
 					{
-						Row1+="<th rowspan=\"2\">"+ParameterDescriptionArray_SplitArray[0]+"</th>";
+						Row1+="<th rowspan=\"2\">"+ParameterDescriptionArray_SplitArray[0];
+						Row1+="<br>["+ParameterDescriptionArray_SplitArray[4]+"]</th>";
 					}
 				}
 				else
