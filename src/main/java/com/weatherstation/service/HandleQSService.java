@@ -27,6 +27,10 @@ public class HandleQSService {
 		{			
 			double inputdouble=Double.parseDouble(input);
 			double outputdouble= (inputdouble*36)/(Math.pow(10, 4));
+			if (outputdouble<0.005)
+			{
+				outputdouble=0;
+			}
 			outputdouble=((double)Math.round(outputdouble * 10000) / 10000);
 			String output=String.valueOf(outputdouble);
 			return output;
