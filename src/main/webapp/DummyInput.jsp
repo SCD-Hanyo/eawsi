@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>Hail AlienThunder 2</h1>
 <form action="UpdateServlet" method="get">
 	Station ID: <input type="text" name="ID" /> <br>
 	Date: <input type="text" name="Date" /> <br>
