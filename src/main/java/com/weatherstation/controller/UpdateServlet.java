@@ -329,6 +329,25 @@ public class UpdateServlet extends HttpServlet {
 						}
 						/*End of SHT-25 section*/
 						
+						/*VH400 section*/
+						else if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("VH400")))
+						{
+							if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("Soil Moisture"))
+							{
+								if (ParameterDescriptionArray_SplitArray[3].equalsIgnoreCase("Avg"))
+								{
+									QSParam[loopcntr]=handle.Calculate_SM_VH400_Avg(QSParam[loopcntr]);
+								}
+								else
+								{									
+									QSParam[loopcntr]=handle.Calculate_SM_VH400(QSParam[loopcntr]);
+								}
+							}							
+						}
+						/*End of VH400 section*/
+						
+						
+						
 						/*Other Sensors*/
 						else
 						{

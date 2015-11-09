@@ -196,5 +196,67 @@ public class HandleQSService {
 		}		
 	}
 	
+	public String Calculate_SM_VH400(String input) {
+		boolean SingleValueNumeric=isNumeric(input);
+		if (SingleValueNumeric==true)
+		{			
+			double inputdouble=Double.parseDouble(input);
+			double vwc=0;
+			
+			if (inputdouble>= 0 && inputdouble<=337)
+			{
+				vwc=((0.03/0.92)*inputdouble)-1;
+			}
+			else if (inputdouble>337 && inputdouble<=398)
+			{
+				vwc=((0.075/0.92)*inputdouble)-17.5;				
+			}
+			else if (inputdouble>398 && inputdouble<=558)
+			{
+				vwc=((0.14424/0.92)*inputdouble)-47.5;								
+			}
+			else if (inputdouble>558 && inputdouble<674)
+			{
+				vwc=((0.07896/0.92)*inputdouble)-7.89;												
+			}
+			else if (inputdouble>=674 && inputdouble<=920)
+			{
+				vwc=((0.1874475/0.92)*inputdouble)-87.4475;																
+			}
+			else
+			{
+				return "0.0";
+			}
 
+			
+			vwc=((double)Math.round(vwc * 100) / 100);
+			String output=String.valueOf(vwc);
+			return output;
+		}
+		else
+		{
+			return "0.0";
+		}		
+	}
+	
+	public String Calculate_SM_VH400_Avg(String input) {
+		boolean SingleValueNumeric=isNumeric(input);
+		if (SingleValueNumeric==true)
+		{
+			double inputdouble=Double.parseDouble(input);
+			inputdouble/=10;
+			String single_input=String.valueOf(inputdouble);
+			String output=Calculate_SM_VH400(single_input);
+			return output;
+		}
+		else
+		{
+			return "0.0";
+		}
+	}
+	
+	
+	
+	
+	
 }
