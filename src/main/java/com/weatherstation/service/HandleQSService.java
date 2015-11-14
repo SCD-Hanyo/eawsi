@@ -206,6 +206,10 @@ public class HandleQSService {
 			if (inputdouble>= 0 && inputdouble<=337)
 			{
 				vwc=((0.03/0.92)*inputdouble)-1;
+				if (vwc<0)
+				{
+					vwc=0;
+				}
 			}
 			else if (inputdouble>337 && inputdouble<=398)
 			{
@@ -225,7 +229,7 @@ public class HandleQSService {
 			}
 			else
 			{
-				return "0.0";
+				return "100";
 			}
 
 			
