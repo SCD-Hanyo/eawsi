@@ -98,7 +98,7 @@ public class GenerateTableService {
 		 } catch (Exception e) {
 			 if (tx != null) {
 				 tx.rollback();
-			 }
+			 } 
 			 e.printStackTrace();
 		 } finally {
 			 session.close();
@@ -107,14 +107,13 @@ public class GenerateTableService {
 	}
 	
 	
-	
+	  
 	
 	public String GenerateTableHeadArrayMethod(String ID)
-	{
-		if (ID !=null)
-		{
-			
-			String Row1 = "<table width=\"85%\" border=\"1\" align=\"center\" cellpadding=\"1\" cellspacing=\"1\"> <thead>   <tr align=\"center\"> <th rowspan=\"2\">Date</th> <th rowspan=\"2\">Time</th>";
+	{ 
+		if (ID !=null) 
+		{			
+			String Row1 ="<table id=\"StationTable\" width=\"85%\" border=\"1\" align=\"center\" cellpadding=\"1\" cellspacing=\"1\"> <thead bgcolor=\"#FFFFFF\">   <tr align=\"center\"> <th rowspan=\"2\">Date</th> <th rowspan=\"2\">Time</th>";
 			String Row2="</tr> <tr align=\"center\" valign=\"middle\">";
 			Stations station2=new Stations();
 			station2=FindStationByID(ID);
@@ -259,7 +258,7 @@ public class GenerateTableService {
 			{
 				Row1+="<th rowspan=\"2\">"+"ET0"+"</th>";				
 			}
-			return Row1+Row2+"</tr>	</thead>";
+			return Row1+Row2+"</tr><br><br><br><br><br>	</thead>";
 		}
 		else
 		{
@@ -697,10 +696,8 @@ public class GenerateTableService {
 			
 			Row1+="</tr>";
 		}
-		return Row1+"</tbody> </table>";
+		return Row1+"</tbody> </table> <table id=\"header-fixed\"></table>";
 	}
-	
-	
 	
 	
 	

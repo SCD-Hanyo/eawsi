@@ -11,6 +11,17 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Welcome</title>
+	<script src="JS/jquery.min.js" type="text/javascript"> </script> 
+	<script src="JS/jquery.fixedtableheader.min.js" type="text/javascript"> </script>
+
+	
+	<script type="text/javascript"> 
+		$(document).ready(function() { 
+  		 $('#StationTable').fixedtableheader(); 
+		}); 
+</script>
+
+
 </head>
 <body>
 <%
