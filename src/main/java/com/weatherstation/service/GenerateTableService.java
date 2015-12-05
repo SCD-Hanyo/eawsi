@@ -240,7 +240,7 @@ public class GenerateTableService {
 						Next02_Split = Next02.split(",");				
 						Row1+="<th colspan=\"3\">"+ParameterDescriptionArray_SplitArray[0];
 						Row1+="<br>["+ParameterDescriptionArray_SplitArray[4]+"]</th>";
-						Row2+="<th bgcolor=\"#E8E6E6\">"+ParameterDescriptionArray_SplitArray[3]+"</th> <th bgcolor=\"#D3D1D1\">"+Next01_Split[3]+"</th><th bgcolor=\"#B7B7B7\">"+Next02_Split[3]+"</th>";
+						Row2+="<th>"+ParameterDescriptionArray_SplitArray[3]+"</th> <th>"+Next01_Split[3]+"</th><th>"+Next02_Split[3]+"</th>";
 						loopcntr+=2;
 					}
 					else
@@ -273,9 +273,6 @@ public class GenerateTableService {
 
 		Stations station=new Stations();
 		station=FindStationByID(ID);
-			
-		
-		
 		
 		List <Data> list=getListOfData(ID);
 		for(Data d:list)
@@ -291,1885 +288,400 @@ public class GenerateTableService {
 			
 			if ((d.getP01())!=null)
 			{
-				if (station.getP01().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP01()+"</td>";
-				}
-				else if (station.getP01().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP01()+"</td>";
-				}
-				else if (station.getP01().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP01()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP01()+"</td>";
-				}
+				Row1+="<td>"+d.getP01()+"</td>";				
 			}
 			if ((d.getP02())!=null)
 			{
-				if (station.getP02().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP02()+"</td>";
-				}
-				else if (station.getP02().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP02()+"</td>";
-				}
-				else if (station.getP02().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP02()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP02()+"</td>";
-				}
+				Row1+="<td>"+d.getP02()+"</td>";				
 			}
 			if ((d.getP03())!=null)
 			{
-				if (station.getP03().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP03()+"</td>";
-				}
-				else if (station.getP03().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP03()+"</td>";
-				}
-				else if (station.getP03().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP03()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP03()+"</td>";
-				}
+				Row1+="<td>"+d.getP03()+"</td>";				
 			}
 			if ((d.getP04())!=null)
 			{
-				if (station.getP04().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP04()+"</td>";
-				}
-				else if (station.getP04().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP04()+"</td>";
-				}
-				else if (station.getP04().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP04()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP04()+"</td>";
-				}
+				Row1+="<td>"+d.getP04()+"</td>";				
 			}
 			if ((d.getP05())!=null)
 			{
-				if (station.getP05().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP05()+"</td>";
-				}
-				else if (station.getP05().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP05()+"</td>";
-				}
-				else if (station.getP05().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP05()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP05()+"</td>";
-				}
+				Row1+="<td>"+d.getP05()+"</td>";				
 			}
 			if ((d.getP06())!=null)
 			{
-				if (station.getP06().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP06()+"</td>";
-				}
-				else if (station.getP06().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP06()+"</td>";
-				}
-				else if (station.getP06().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP06()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP06()+"</td>";
-				}
+				Row1+="<td>"+d.getP06()+"</td>";				
 			}
 			if ((d.getP07())!=null)
 			{
-				if (station.getP07().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP07()+"</td>";
-				}
-				else if (station.getP07().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP07()+"</td>";
-				}
-				else if (station.getP07().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP07()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP07()+"</td>";
-				}
+				Row1+="<td>"+d.getP07()+"</td>";				
 			}
 			if ((d.getP08())!=null)
 			{
-				if (station.getP08().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP08()+"</td>";
-				}
-				else if (station.getP08().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP08()+"</td>";
-				}
-				else if (station.getP08().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP08()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP08()+"</td>";
-				}
+				Row1+="<td>"+d.getP08()+"</td>";				
 			}
 			if ((d.getP09())!=null)
 			{
-				if (station.getP09().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP09()+"</td>";
-				}
-				else if (station.getP09().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP09()+"</td>";
-				}
-				else if (station.getP09().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP09()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP09()+"</td>";
-				}
+				Row1+="<td>"+d.getP09()+"</td>";				
 			}
 			if ((d.getP10())!=null)
 			{
-				if (station.getP10().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP10()+"</td>";
-				}
-				else if (station.getP10().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP10()+"</td>";
-				}
-				else if (station.getP10().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP10()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP10()+"</td>";
-				}
+				Row1+="<td>"+d.getP10()+"</td>";				
 			}
 			if ((d.getP11())!=null)
 			{
-				if (station.getP11().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP11()+"</td>";
-				}
-				else if (station.getP11().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP11()+"</td>";
-				}
-				else if (station.getP11().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP11()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP11()+"</td>";
-				}
+				Row1+="<td>"+d.getP11()+"</td>";				
 			}
 			if ((d.getP12())!=null)
 			{
-				if (station.getP12().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP12()+"</td>";
-				}
-				else if (station.getP12().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP12()+"</td>";
-				}
-				else if (station.getP12().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP12()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP12()+"</td>";
-				}
+				Row1+="<td>"+d.getP12()+"</td>";				
 			}
 			if ((d.getP13())!=null)
 			{
-				if (station.getP13().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP13()+"</td>";
-				}
-				else if (station.getP13().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP13()+"</td>";
-				}
-				else if (station.getP13().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP13()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP13()+"</td>";
-				}
+				Row1+="<td>"+d.getP13()+"</td>";				
 			}
 			if ((d.getP14())!=null)
 			{
-				if (station.getP14().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP14()+"</td>";
-				}
-				else if (station.getP14().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP14()+"</td>";
-				}
-				else if (station.getP14().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP14()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP14()+"</td>";
-				}
+				Row1+="<td>"+d.getP14()+"</td>";				
 			}
 			if ((d.getP15())!=null)
 			{
-				if (station.getP15().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP15()+"</td>";
-				}
-				else if (station.getP15().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP15()+"</td>";
-				}
-				else if (station.getP15().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP15()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP15()+"</td>";
-				}
+				Row1+="<td>"+d.getP15()+"</td>";				
 			}
 			if ((d.getP16())!=null)
 			{
-				if (station.getP16().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP16()+"</td>";
-				}
-				else if (station.getP16().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP16()+"</td>";
-				}
-				else if (station.getP16().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP16()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP16()+"</td>";
-				}
+				Row1+="<td>"+d.getP16()+"</td>";				
 			}
 			if ((d.getP17())!=null)
 			{
-				if (station.getP17().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP17()+"</td>";
-				}
-				else if (station.getP17().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP17()+"</td>";
-				}
-				else if (station.getP17().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP17()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP17()+"</td>";
-				}
+				Row1+="<td>"+d.getP17()+"</td>";				
 			}
 			if ((d.getP18())!=null)
 			{
-				if (station.getP18().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP18()+"</td>";
-				}
-				else if (station.getP18().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP18()+"</td>";
-				}
-				else if (station.getP18().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP18()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP18()+"</td>";
-				}
+				Row1+="<td>"+d.getP18()+"</td>";				
 			}
 			if ((d.getP19())!=null)
 			{
-				if (station.getP19().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP19()+"</td>";
-				}
-				else if (station.getP19().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP19()+"</td>";
-				}
-				else if (station.getP19().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP19()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP19()+"</td>";
-				}
+				Row1+="<td>"+d.getP19()+"</td>";				
 			}
 			if ((d.getP20())!=null)
 			{
-				if (station.getP20().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP20()+"</td>";
-				}
-				else if (station.getP20().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP20()+"</td>";
-				}
-				else if (station.getP20().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP20()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP20()+"</td>";
-				}
+				Row1+="<td>"+d.getP20()+"</td>";				
 			}
 			if ((d.getP21())!=null)
 			{
-				if (station.getP21().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP21()+"</td>";
-				}
-				else if (station.getP21().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP21()+"</td>";
-				}
-				else if (station.getP21().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP21()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP21()+"</td>";
-				}
+				Row1+="<td>"+d.getP21()+"</td>";				
 			}
 			if ((d.getP22())!=null)
 			{
-				if (station.getP22().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP22()+"</td>";
-				}
-				else if (station.getP22().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP22()+"</td>";
-				}
-				else if (station.getP22().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP22()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP22()+"</td>";
-				}
+				Row1+="<td>"+d.getP22()+"</td>";				
 			}
 			if ((d.getP23())!=null)
 			{
-				if (station.getP23().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP23()+"</td>";
-				}
-				else if (station.getP23().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP23()+"</td>";
-				}
-				else if (station.getP23().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP23()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP23()+"</td>";
-				}
+				Row1+="<td>"+d.getP23()+"</td>";				
 			}
 			if ((d.getP24())!=null)
 			{
-				if (station.getP24().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP24()+"</td>";
-				}
-				else if (station.getP24().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP24()+"</td>";
-				}
-				else if (station.getP24().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP24()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP24()+"</td>";
-				}
+				Row1+="<td>"+d.getP24()+"</td>";				
 			}
 			if ((d.getP25())!=null)
 			{
-				if (station.getP25().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP25()+"</td>";
-				}
-				else if (station.getP25().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP25()+"</td>";
-				}
-				else if (station.getP25().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP25()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP25()+"</td>";
-				}
+				Row1+="<td>"+d.getP25()+"</td>";				
 			}
 			if ((d.getP26())!=null)
 			{
-				if (station.getP26().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP26()+"</td>";
-				}
-				else if (station.getP26().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP26()+"</td>";
-				}
-				else if (station.getP26().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP26()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP26()+"</td>";
-				}
+				Row1+="<td>"+d.getP26()+"</td>";				
 			}
 			if ((d.getP27())!=null)
 			{
-				if (station.getP27().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP27()+"</td>";
-				}
-				else if (station.getP27().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP27()+"</td>";
-				}
-				else if (station.getP27().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP27()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP27()+"</td>";
-				}
+				Row1+="<td>"+d.getP27()+"</td>";				
 			}
 			if ((d.getP28())!=null)
 			{
-				if (station.getP28().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP28()+"</td>";
-				}
-				else if (station.getP28().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP28()+"</td>";
-				}
-				else if (station.getP28().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP28()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP28()+"</td>";
-				}
+				Row1+="<td>"+d.getP28()+"</td>";				
 			}
 			if ((d.getP29())!=null)
 			{
-				if (station.getP29().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP29()+"</td>";
-				}
-				else if (station.getP29().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP29()+"</td>";
-				}
-				else if (station.getP29().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP29()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP29()+"</td>";
-				}
+				Row1+="<td>"+d.getP29()+"</td>";				
 			}
 			if ((d.getP30())!=null)
 			{
-				if (station.getP30().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP30()+"</td>";
-				}
-				else if (station.getP30().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP30()+"</td>";
-				}
-				else if (station.getP30().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP30()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP30()+"</td>";
-				}
+				Row1+="<td>"+d.getP30()+"</td>";				
 			}
 			if ((d.getP31())!=null)
 			{
-				if (station.getP31().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP31()+"</td>";
-				}
-				else if (station.getP31().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP31()+"</td>";
-				}
-				else if (station.getP31().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP31()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP31()+"</td>";
-				}
+				Row1+="<td>"+d.getP31()+"</td>";				
 			}
 			if ((d.getP32())!=null)
 			{
-				if (station.getP32().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP32()+"</td>";
-				}
-				else if (station.getP32().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP32()+"</td>";
-				}
-				else if (station.getP32().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP32()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP32()+"</td>";
-				}
+				Row1+="<td>"+d.getP32()+"</td>";				
 			}
 			if ((d.getP33())!=null)
 			{
-				if (station.getP33().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP33()+"</td>";
-				}
-				else if (station.getP33().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP33()+"</td>";
-				}
-				else if (station.getP33().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP33()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP33()+"</td>";
-				}
+				Row1+="<td>"+d.getP33()+"</td>";				
 			}
 			if ((d.getP34())!=null)
 			{
-				if (station.getP34().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP34()+"</td>";
-				}
-				else if (station.getP34().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP34()+"</td>";
-				}
-				else if (station.getP34().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP34()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP34()+"</td>";
-				}
+				Row1+="<td>"+d.getP34()+"</td>";				
 			}
 			if ((d.getP35())!=null)
 			{
-				if (station.getP35().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP35()+"</td>";
-				}
-				else if (station.getP35().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP35()+"</td>";
-				}
-				else if (station.getP35().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP35()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP35()+"</td>";
-				}
+				Row1+="<td>"+d.getP35()+"</td>";				
 			}
 			if ((d.getP36())!=null)
 			{
-				if (station.getP36().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP36()+"</td>";
-				}
-				else if (station.getP36().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP36()+"</td>";
-				}
-				else if (station.getP36().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP36()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP36()+"</td>";
-				}
+				Row1+="<td>"+d.getP36()+"</td>";				
 			}
 			if ((d.getP37())!=null)
 			{
-				if (station.getP37().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP37()+"</td>";
-				}
-				else if (station.getP37().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP37()+"</td>";
-				}
-				else if (station.getP37().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP37()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP37()+"</td>";
-				}
+				Row1+="<td>"+d.getP37()+"</td>";				
 			}
 			if ((d.getP38())!=null)
 			{
-				if (station.getP38().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP38()+"</td>";
-				}
-				else if (station.getP38().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP38()+"</td>";
-				}
-				else if (station.getP38().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP38()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP38()+"</td>";
-				}
+				Row1+="<td>"+d.getP38()+"</td>";				
 			}
 			if ((d.getP39())!=null)
 			{
-				if (station.getP39().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP39()+"</td>";
-				}
-				else if (station.getP39().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP39()+"</td>";
-				}
-				else if (station.getP39().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP39()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP39()+"</td>";
-				}
+				Row1+="<td>"+d.getP39()+"</td>";				
 			}
 			if ((d.getP40())!=null)
 			{
-				if (station.getP40().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP40()+"</td>";
-				}
-				else if (station.getP40().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP40()+"</td>";
-				}
-				else if (station.getP40().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP40()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP40()+"</td>";
-				}
+				Row1+="<td>"+d.getP40()+"</td>";				
 			}
 			if ((d.getP41())!=null)
 			{
-				if (station.getP41().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP41()+"</td>";
-				}
-				else if (station.getP41().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP41()+"</td>";
-				}
-				else if (station.getP41().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP41()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP41()+"</td>";
-				}
+				Row1+="<td>"+d.getP41()+"</td>";				
 			}
 			if ((d.getP42())!=null)
 			{
-				if (station.getP42().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP42()+"</td>";
-				}
-				else if (station.getP42().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP42()+"</td>";
-				}
-				else if (station.getP42().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP42()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP42()+"</td>";
-				}
+				Row1+="<td>"+d.getP42()+"</td>";				
 			}
 			if ((d.getP43())!=null)
 			{
-				if (station.getP43().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP43()+"</td>";
-				}
-				else if (station.getP43().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP43()+"</td>";
-				}
-				else if (station.getP43().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP43()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP43()+"</td>";
-				}
+				Row1+="<td>"+d.getP43()+"</td>";				
 			}
 			if ((d.getP44())!=null)
 			{
-				if (station.getP44().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP44()+"</td>";
-				}
-				else if (station.getP44().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP44()+"</td>";
-				}
-				else if (station.getP44().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP44()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP44()+"</td>";
-				}
+				Row1+="<td>"+d.getP44()+"</td>";				
 			}
 			if ((d.getP45())!=null)
 			{
-				if (station.getP45().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP45()+"</td>";
-				}
-				else if (station.getP45().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP45()+"</td>";
-				}
-				else if (station.getP45().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP45()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP45()+"</td>";
-				}
+				Row1+="<td>"+d.getP45()+"</td>";				
 			}
 			if ((d.getP46())!=null)
 			{
-				if (station.getP46().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP46()+"</td>";
-				}
-				else if (station.getP46().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP46()+"</td>";
-				}
-				else if (station.getP46().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP46()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP46()+"</td>";
-				}
+				Row1+="<td>"+d.getP46()+"</td>";				
 			}
 			if ((d.getP47())!=null)
 			{
-				if (station.getP47().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP47()+"</td>";
-				}
-				else if (station.getP47().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP47()+"</td>";
-				}
-				else if (station.getP47().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP47()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP47()+"</td>";
-				}
+				Row1+="<td>"+d.getP47()+"</td>";				
 			}
 			if ((d.getP48())!=null)
 			{
-				if (station.getP48().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP48()+"</td>";
-				}
-				else if (station.getP48().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP48()+"</td>";
-				}
-				else if (station.getP48().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP48()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP48()+"</td>";
-				}
+				Row1+="<td>"+d.getP48()+"</td>";				
 			}
 			if ((d.getP49())!=null)
 			{
-				if (station.getP49().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP49()+"</td>";
-				}
-				else if (station.getP49().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP49()+"</td>";
-				}
-				else if (station.getP49().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP49()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP49()+"</td>";
-				}
+				Row1+="<td>"+d.getP49()+"</td>";				
 			}
 			if ((d.getP50())!=null)
 			{
-				if (station.getP50().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP50()+"</td>";
-				}
-				else if (station.getP50().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP50()+"</td>";
-				}
-				else if (station.getP50().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP50()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP50()+"</td>";
-				}
+				Row1+="<td>"+d.getP50()+"</td>";				
 			}
 			if ((d.getP51())!=null)
 			{
-				if (station.getP51().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP51()+"</td>";
-				}
-				else if (station.getP51().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP51()+"</td>";
-				}
-				else if (station.getP51().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP51()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP51()+"</td>";
-				}
+				Row1+="<td>"+d.getP51()+"</td>";				
 			}
 			if ((d.getP52())!=null)
 			{
-				if (station.getP52().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP52()+"</td>";
-				}
-				else if (station.getP52().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP52()+"</td>";
-				}
-				else if (station.getP52().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP52()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP52()+"</td>";
-				}
+				Row1+="<td>"+d.getP52()+"</td>";				
 			}
 			if ((d.getP53())!=null)
 			{
-				if (station.getP53().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP53()+"</td>";
-				}
-				else if (station.getP53().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP53()+"</td>";
-				}
-				else if (station.getP53().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP53()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP53()+"</td>";
-				}
+				Row1+="<td>"+d.getP53()+"</td>";				
 			}
 			if ((d.getP54())!=null)
 			{
-				if (station.getP54().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP54()+"</td>";
-				}
-				else if (station.getP54().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP54()+"</td>";
-				}
-				else if (station.getP54().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP54()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP54()+"</td>";
-				}
+				Row1+="<td>"+d.getP54()+"</td>";				
 			}
 			if ((d.getP55())!=null)
 			{
-				if (station.getP55().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP55()+"</td>";
-				}
-				else if (station.getP55().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP55()+"</td>";
-				}
-				else if (station.getP55().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP55()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP55()+"</td>";
-				}
+				Row1+="<td>"+d.getP55()+"</td>";				
 			}
 			if ((d.getP56())!=null)
 			{
-				if (station.getP56().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP56()+"</td>";
-				}
-				else if (station.getP56().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP56()+"</td>";
-				}
-				else if (station.getP56().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP56()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP56()+"</td>";
-				}
+				Row1+="<td>"+d.getP56()+"</td>";				
 			}
 			if ((d.getP57())!=null)
 			{
-				if (station.getP57().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP57()+"</td>";
-				}
-				else if (station.getP57().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP57()+"</td>";
-				}
-				else if (station.getP57().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP57()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP57()+"</td>";
-				}
+				Row1+="<td>"+d.getP57()+"</td>";				
 			}
 			if ((d.getP58())!=null)
 			{
-				if (station.getP58().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP58()+"</td>";
-				}
-				else if (station.getP58().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP58()+"</td>";
-				}
-				else if (station.getP58().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP58()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP58()+"</td>";
-				}
+				Row1+="<td>"+d.getP58()+"</td>";				
 			}
 			if ((d.getP59())!=null)
 			{
-				if (station.getP59().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP59()+"</td>";
-				}
-				else if (station.getP59().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP59()+"</td>";
-				}
-				else if (station.getP59().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP59()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP59()+"</td>";
-				}
+				Row1+="<td>"+d.getP59()+"</td>";				
 			}
 			if ((d.getP60())!=null)
 			{
-				if (station.getP60().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP60()+"</td>";
-				}
-				else if (station.getP60().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP60()+"</td>";
-				}
-				else if (station.getP60().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP60()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP60()+"</td>";
-				}
+				Row1+="<td>"+d.getP60()+"</td>";				
 			}
 			if ((d.getP61())!=null)
 			{
-				if (station.getP61().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP61()+"</td>";
-				}
-				else if (station.getP61().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP61()+"</td>";
-				}
-				else if (station.getP61().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP61()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP61()+"</td>";
-				}
+				Row1+="<td>"+d.getP61()+"</td>";				
 			}
 			if ((d.getP62())!=null)
 			{
-				if (station.getP62().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP62()+"</td>";
-				}
-				else if (station.getP62().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP62()+"</td>";
-				}
-				else if (station.getP62().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP62()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP62()+"</td>";
-				}
+				Row1+="<td>"+d.getP62()+"</td>";				
 			}
 			if ((d.getP63())!=null)
 			{
-				if (station.getP63().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP63()+"</td>";
-				}
-				else if (station.getP63().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP63()+"</td>";
-				}
-				else if (station.getP63().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP63()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP63()+"</td>";
-				}
+				Row1+="<td>"+d.getP63()+"</td>";				
 			}
 			if ((d.getP64())!=null)
 			{
-				if (station.getP64().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP64()+"</td>";
-				}
-				else if (station.getP64().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP64()+"</td>";
-				}
-				else if (station.getP64().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP64()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP64()+"</td>";
-				}
+				Row1+="<td>"+d.getP64()+"</td>";				
 			}
 			if ((d.getP65())!=null)
 			{
-				if (station.getP65().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP65()+"</td>";
-				}
-				else if (station.getP65().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP65()+"</td>";
-				}
-				else if (station.getP65().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP65()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP65()+"</td>";
-				}
+				Row1+="<td>"+d.getP65()+"</td>";				
 			}
 			if ((d.getP66())!=null)
 			{
-				if (station.getP66().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP66()+"</td>";
-				}
-				else if (station.getP66().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP66()+"</td>";
-				}
-				else if (station.getP66().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP66()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP66()+"</td>";
-				}
+				Row1+="<td>"+d.getP66()+"</td>";				
 			}
 			if ((d.getP67())!=null)
 			{
-				if (station.getP67().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP67()+"</td>";
-				}
-				else if (station.getP67().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP67()+"</td>";
-				}
-				else if (station.getP67().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP67()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP67()+"</td>";
-				}
+				Row1+="<td>"+d.getP67()+"</td>";				
 			}
 			if ((d.getP68())!=null)
 			{
-				if (station.getP68().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP68()+"</td>";
-				}
-				else if (station.getP68().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP68()+"</td>";
-				}
-				else if (station.getP68().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP68()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP68()+"</td>";
-				}
+				Row1+="<td>"+d.getP68()+"</td>";				
 			}
 			if ((d.getP69())!=null)
 			{
-				if (station.getP69().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP69()+"</td>";
-				}
-				else if (station.getP69().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP69()+"</td>";
-				}
-				else if (station.getP69().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP69()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP69()+"</td>";
-				}
+				Row1+="<td>"+d.getP69()+"</td>";				
 			}
 			if ((d.getP70())!=null)
 			{
-				if (station.getP70().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP70()+"</td>";
-				}
-				else if (station.getP70().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP70()+"</td>";
-				}
-				else if (station.getP70().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP70()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP70()+"</td>";
-				}
+				Row1+="<td>"+d.getP70()+"</td>";				
 			}
 			if ((d.getP71())!=null)
 			{
-				if (station.getP71().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP71()+"</td>";
-				}
-				else if (station.getP71().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP71()+"</td>";
-				}
-				else if (station.getP71().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP71()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP71()+"</td>";
-				}
+				Row1+="<td>"+d.getP71()+"</td>";				
 			}
 			if ((d.getP72())!=null)
 			{
-				if (station.getP72().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP72()+"</td>";
-				}
-				else if (station.getP72().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP72()+"</td>";
-				}
-				else if (station.getP72().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP72()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP72()+"</td>";
-				}
+				Row1+="<td>"+d.getP72()+"</td>";				
 			}
 			if ((d.getP73())!=null)
 			{
-				if (station.getP73().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP73()+"</td>";
-				}
-				else if (station.getP73().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP73()+"</td>";
-				}
-				else if (station.getP73().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP73()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP73()+"</td>";
-				}
+				Row1+="<td>"+d.getP73()+"</td>";				
 			}
 			if ((d.getP74())!=null)
 			{
-				if (station.getP74().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP74()+"</td>";
-				}
-				else if (station.getP74().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP74()+"</td>";
-				}
-				else if (station.getP74().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP74()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP74()+"</td>";
-				}
+				Row1+="<td>"+d.getP74()+"</td>";				
 			}
 			if ((d.getP75())!=null)
 			{
-				if (station.getP75().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP75()+"</td>";
-				}
-				else if (station.getP75().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP75()+"</td>";
-				}
-				else if (station.getP75().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP75()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP75()+"</td>";
-				}
+				Row1+="<td>"+d.getP75()+"</td>";				
 			}
 			if ((d.getP76())!=null)
 			{
-				if (station.getP76().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP76()+"</td>";
-				}
-				else if (station.getP76().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP76()+"</td>";
-				}
-				else if (station.getP76().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP76()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP76()+"</td>";
-				}
+				Row1+="<td>"+d.getP76()+"</td>";				
 			}
 			if ((d.getP77())!=null)
 			{
-				if (station.getP77().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP77()+"</td>";
-				}
-				else if (station.getP77().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP77()+"</td>";
-				}
-				else if (station.getP77().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP77()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP77()+"</td>";
-				}
+				Row1+="<td>"+d.getP77()+"</td>";				
 			}
 			if ((d.getP78())!=null)
 			{
-				if (station.getP78().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP78()+"</td>";
-				}
-				else if (station.getP78().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP78()+"</td>";
-				}
-				else if (station.getP78().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP78()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP78()+"</td>";
-				}
+				Row1+="<td>"+d.getP78()+"</td>";				
 			}
 			if ((d.getP79())!=null)
 			{
-				if (station.getP79().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP79()+"</td>";
-				}
-				else if (station.getP79().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP79()+"</td>";
-				}
-				else if (station.getP79().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP79()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP79()+"</td>";
-				}
+				Row1+="<td>"+d.getP79()+"</td>";				
 			}
 			if ((d.getP80())!=null)
 			{
-				if (station.getP80().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP80()+"</td>";
-				}
-				else if (station.getP80().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP80()+"</td>";
-				}
-				else if (station.getP80().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP80()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP80()+"</td>";
-				}
+				Row1+="<td>"+d.getP80()+"</td>";				
 			}
 			if ((d.getP81())!=null)
 			{
-				if (station.getP81().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP81()+"</td>";
-				}
-				else if (station.getP81().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP81()+"</td>";
-				}
-				else if (station.getP81().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP81()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP81()+"</td>";
-				}
+				Row1+="<td>"+d.getP81()+"</td>";				
 			}
 			if ((d.getP82())!=null)
 			{
-				if (station.getP82().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP82()+"</td>";
-				}
-				else if (station.getP82().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP82()+"</td>";
-				}
-				else if (station.getP82().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP82()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP82()+"</td>";
-				}
+				Row1+="<td>"+d.getP82()+"</td>";				
 			}
 			if ((d.getP83())!=null)
 			{
-				if (station.getP83().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP83()+"</td>";
-				}
-				else if (station.getP83().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP83()+"</td>";
-				}
-				else if (station.getP83().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP83()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP83()+"</td>";
-				}
+				Row1+="<td>"+d.getP83()+"</td>";				
 			}
 			if ((d.getP84())!=null)
 			{
-				if (station.getP84().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP84()+"</td>";
-				}
-				else if (station.getP84().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP84()+"</td>";
-				}
-				else if (station.getP84().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP84()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP84()+"</td>";
-				}
+				Row1+="<td>"+d.getP84()+"</td>";				
 			}
 			if ((d.getP85())!=null)
 			{
-				if (station.getP85().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP85()+"</td>";
-				}
-				else if (station.getP85().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP85()+"</td>";
-				}
-				else if (station.getP85().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP85()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP85()+"</td>";
-				}
+				Row1+="<td>"+d.getP85()+"</td>";				
 			}
 			if ((d.getP86())!=null)
 			{
-				if (station.getP86().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP86()+"</td>";
-				}
-				else if (station.getP86().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP86()+"</td>";
-				}
-				else if (station.getP86().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP86()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP86()+"</td>";
-				}
+				Row1+="<td>"+d.getP86()+"</td>";				
 			}
 			if ((d.getP87())!=null)
 			{
-				if (station.getP87().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP87()+"</td>";
-				}
-				else if (station.getP87().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP87()+"</td>";
-				}
-				else if (station.getP87().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP87()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP87()+"</td>";
-				}
+				Row1+="<td>"+d.getP87()+"</td>";				
 			}
 			if ((d.getP88())!=null)
 			{
-				if (station.getP88().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP88()+"</td>";
-				}
-				else if (station.getP88().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP88()+"</td>";
-				}
-				else if (station.getP88().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP88()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP88()+"</td>";
-				}
+				Row1+="<td>"+d.getP88()+"</td>";				
 			}
 			if ((d.getP89())!=null)
 			{
-				if (station.getP89().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP89()+"</td>";
-				}
-				else if (station.getP89().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP89()+"</td>";
-				}
-				else if (station.getP89().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP89()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP89()+"</td>";
-				}
+				Row1+="<td>"+d.getP89()+"</td>";				
 			}
 			if ((d.getP90())!=null)
 			{
-				if (station.getP90().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP90()+"</td>";
-				}
-				else if (station.getP90().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP90()+"</td>";
-				}
-				else if (station.getP90().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP90()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP90()+"</td>";
-				}
+				Row1+="<td>"+d.getP90()+"</td>";				
 			}
 			if ((d.getP91())!=null)
 			{
-				if (station.getP91().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP91()+"</td>";
-				}
-				else if (station.getP91().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP91()+"</td>";
-				}
-				else if (station.getP91().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP91()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP91()+"</td>";
-				}
+				Row1+="<td>"+d.getP91()+"</td>";				
 			}
 			if ((d.getP92())!=null)
 			{
-				if (station.getP92().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP92()+"</td>";
-				}
-				else if (station.getP92().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP92()+"</td>";
-				}
-				else if (station.getP92().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP92()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP92()+"</td>";
-				}
+				Row1+="<td>"+d.getP92()+"</td>";				
 			}
 			if ((d.getP93())!=null)
 			{
-				if (station.getP93().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP93()+"</td>";
-				}
-				else if (station.getP93().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP93()+"</td>";
-				}
-				else if (station.getP93().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP93()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP93()+"</td>";
-				}
+				Row1+="<td>"+d.getP93()+"</td>";				
 			}
 			if ((d.getP94())!=null)
 			{
-				if (station.getP94().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP94()+"</td>";
-				}
-				else if (station.getP94().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP94()+"</td>";
-				}
-				else if (station.getP94().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP94()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP94()+"</td>";
-				}
+				Row1+="<td>"+d.getP94()+"</td>";				
 			}
 			if ((d.getP95())!=null)
 			{
-				if (station.getP95().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP95()+"</td>";
-				}
-				else if (station.getP95().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP95()+"</td>";
-				}
-				else if (station.getP95().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP95()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP95()+"</td>";
-				}
+				Row1+="<td>"+d.getP95()+"</td>";				
 			}
 			if ((d.getP96())!=null)
 			{
-				if (station.getP96().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP96()+"</td>";
-				}
-				else if (station.getP96().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP96()+"</td>";
-				}
-				else if (station.getP96().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP96()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP96()+"</td>";
-				}
+				Row1+="<td>"+d.getP96()+"</td>";				
 			}
 			if ((d.getP97())!=null)
 			{
-				if (station.getP97().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP97()+"</td>";
-				}
-				else if (station.getP97().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP97()+"</td>";
-				}
-				else if (station.getP97().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP97()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP97()+"</td>";
-				}
+				Row1+="<td>"+d.getP97()+"</td>";				
 			}
 			if ((d.getP98())!=null)
 			{
-				if (station.getP98().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP98()+"</td>";
-				}
-				else if (station.getP98().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP98()+"</td>";
-				}
-				else if (station.getP98().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP98()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP98()+"</td>";
-				}
+				Row1+="<td>"+d.getP98()+"</td>";				
 			}
 			if ((d.getP99())!=null)
 			{
-				if (station.getP99().contains("3,Min"))
-				{
-					Row1+="<td bgcolor=\"#E8E6E6\">"+d.getP99()+"</td>";
-				}
-				else if (station.getP99().contains("3,Avg"))
-				{
-					Row1+="<td bgcolor=\"#D3D1D1\">"+d.getP99()+"</td>";
-				}
-				else if (station.getP99().contains("3,Max"))
-				{
-					Row1+="<td bgcolor=\"#B7B7B7\">"+d.getP99()+"</td>";
-				}
-				else
-				{
-					Row1+="<td>"+d.getP99()+"</td>";
-				}
-			}						
+				Row1+="<td>"+d.getP99()+"</td>";				
+			}
 			boolean ET0_Support_Flag=(station.getModel()).contains("ET0 Supported");
 			if (ET0_Support_Flag)
 			{
@@ -2187,8 +699,6 @@ public class GenerateTableService {
 		}
 		return Row1+"</tbody> </table>";
 	}
-	
-	
 	
 	
 	
