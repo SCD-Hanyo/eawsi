@@ -5,8 +5,10 @@ import com.weatherstation.model.Data;
 import com.weatherstation.util.HibernateUtil_Stations;
 import com.weatherstation.util.HibernateUtil_Data;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 import org.hibernate.Query;
@@ -105,6 +107,62 @@ public class GenerateTableService {
 		 }
 		 return list;
 	}
+
+	public List<Data> getListOfDataLimited(String ID,String PageIndexString, String PageSizeString){
+		if (PageIndexString=="" ||PageIndexString==null)
+		{
+			PageIndexString="0";
+		}
+		int PageSizeInt=(Integer.parseInt(PageSizeString));
+		int FirstReadingIndex=(Integer.parseInt(PageIndexString))*PageSizeInt;
+		
+		 List<Data> list = new ArrayList<Data>();
+		 Session session = HibernateUtil_Data.openSession();
+		 Transaction tx = null;	
+
+		 try {
+			 tx = session.getTransaction();
+			 tx.begin();
+			 //list = session.createQuery("from Data").list();				
+			 //list = session.createQuery("from Data ORDER BY RecordIndex desc").list();	
+			 list = (session.createQuery("from Data where StationID='" + ID+ "' ORDER BY Date desc,Time desc").setFirstResult(FirstReadingIndex).setMaxResults(PageSizeInt)).list();					
+			 tx.commit();
+		 } catch (Exception e) {
+			 if (tx != null) {
+				 tx.rollback();
+			 }
+			 e.printStackTrace();
+		 } finally {
+			 session.close();
+		 }
+		 return list;
+	}
+	
+	public Long getNumberOfReadings(String ID){
+		String CountQueryString="Select count (*) from Data where StationId= '"+ID+"'";
+		 Long numberOfReadings=(long) 3;
+		 Session session = HibernateUtil_Data.openSession();
+		 Transaction tx = null;	
+		 
+		 try {
+			 tx = session.getTransaction();
+			 tx.begin();
+			 Query CountQuery=session.createQuery(CountQueryString);
+			 numberOfReadings=(Long) CountQuery.uniqueResult();
+			 tx.commit();
+		 } catch (Exception e) {
+			 if (tx != null) {
+				 tx.rollback();
+			 }
+			 e.printStackTrace();
+		 } finally {
+			 session.close();
+		 }
+		 return numberOfReadings;
+	}
+	
+	
+	
 	
 	
 	  
@@ -266,14 +324,20 @@ public class GenerateTableService {
 		}
 	}
 	
-	public String GenerateTableBodyArrayMethod(String ID)
+	public String GenerateTableBodyArrayMethod(String ID,String PageIndexString, String PageSizeString)
 	{
 		String Row1 = "<tbody> <tr>";
 
 		Stations station=new Stations();
-		station=FindStationByID(ID);
+		station=FindStationByID(ID); 
+		if (PageIndexString=="" || PageIndexString==null)
+		{
+			PageIndexString="0";
+		}
 		
-		List <Data> list=getListOfData(ID);
+		
+		//List <Data> list=getListOfData(ID);
+		List <Data> list=getListOfDataLimited(ID,PageIndexString,PageSizeString);
 		for(Data d:list)
 		{
 			if ((d.getDate())!=null)			
