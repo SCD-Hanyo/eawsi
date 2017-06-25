@@ -17,7 +17,7 @@ public class HandleQSService {
 	
 	public static boolean isNumeric(String str)
 	{
-	  return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
+		return str.matches("[+-]?\\d+(\\.\\d+)?");  //match a number with optional '-' or '+' and decimal.
 	}
 
 	private String Calculate_SR_Apogee(String input) {
@@ -259,6 +259,25 @@ public class HandleQSService {
 		}
 	}
 	
+	/* ###################################### 5TE SDI12 Sensor ##########################*/
+	public String Calculate_5TE_SDI12_VWC(String input) {
+		boolean SingleValueNumeric=isNumeric(input);
+		if (SingleValueNumeric==true)
+		{
+			double inputdouble=Double.parseDouble(input);
+			double termA=4.3*(Math.pow(10,-6))*Math.pow(inputdouble, 3);
+			double termB=-5.5*(Math.pow(10,-4))*Math.pow(inputdouble, 2);
+			double termC=2.92*(Math.pow(10,-2))*inputdouble;
+			double termD=-5.3*(Math.pow(10,-2));
+			double outputDouble=termA+termB+termC+termD;
+			String outputString=String.valueOf(outputDouble);
+			return outputString;
+		}
+		else
+		{
+			return "0.0";
+		}
+	}
 	
 	
 	

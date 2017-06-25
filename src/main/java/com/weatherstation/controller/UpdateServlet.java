@@ -363,6 +363,19 @@ public class UpdateServlet extends HttpServlet {
 								}
 							}
 							/* End of VH400 section */
+							/*5TE SDI12 Sensor Section*/
+							else if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("5TE"))) 
+							{
+								if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("VWC")) 
+								{
+									QSParam[loopcntr] = handle.Calculate_5TE_SDI12_VWC(QSParam[loopcntr]);
+								}
+								// Electric Conductivity and Temperature do not need equations,however they need to have the sign removed.
+								else
+								{
+									QSParam[loopcntr]=QSParam[loopcntr].replace("+","");
+								}
+							}	
 
 							/* Other Sensors */
 							else {
