@@ -270,6 +270,7 @@ public class HandleQSService {
 			double termC=2.92*(Math.pow(10,-2))*inputdouble;
 			double termD=-5.3*(Math.pow(10,-2));
 			double outputDouble=termA+termB+termC+termD;
+			outputDouble=((double)Math.round(outputDouble * 10000) / 10000);
 			String outputString=String.valueOf(outputDouble);
 			return outputString;
 		}
