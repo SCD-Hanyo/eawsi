@@ -262,7 +262,7 @@ public class HandleQSService {
 	/* ###################################### 5TE SDI12 Sensor ##########################*/
 	public String Calculate_5TE_SDI12_VWC(String input) {
 		boolean SingleValueNumeric=isNumeric(input);
-		input=input.trim();
+		input=input.replace(" ", "");
 		if (SingleValueNumeric==true)
 		{
 			double inputdouble=Double.parseDouble(input);
@@ -279,9 +279,5 @@ public class HandleQSService {
 		{
 			return "Error= "+input;
 		}
-	}
-	
-	
-	
-	
+	}	
 }
