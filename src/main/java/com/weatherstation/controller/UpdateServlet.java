@@ -45,9 +45,9 @@ public class UpdateServlet extends HttpServlet {
 		String ID = request.getParameter("ID");
 		String date = request.getParameter("Date");
 		String time = request.getParameter("Time");
-		
-		date = "20" + date.substring(0, 2) + "-" + date.substring(2, 4)
-				+ "-" + date.substring(4);
+
+		date = "20" + date.substring(0, 2) + "-" + date.substring(2, 4) + "-"
+				+ date.substring(4);
 		time = time.substring(0, 2) + ":" + time.substring(2);
 
 		GenerateTableService describeByID = new GenerateTableService();
@@ -264,8 +264,6 @@ public class UpdateServlet extends HttpServlet {
 				ParameterDescriptionArray[98] = station.getP98();
 				ParameterDescriptionArray[99] = station.getP99();
 
-				
-
 				for (loopcntr = 1; loopcntr < 100; loopcntr++) {
 					if (ParameterDescriptionArray[loopcntr] != null) {
 						String[] ParameterDescriptionArray_SplitArray = (ParameterDescriptionArray[loopcntr])
@@ -363,19 +361,22 @@ public class UpdateServlet extends HttpServlet {
 								}
 							}
 							/* End of VH400 section */
-							/*5TE SDI12 Sensor Section*/
-							else if ((ParameterDescriptionArray_SplitArray[1].equalsIgnoreCase("5TE"))) 
-							{
-								if (ParameterDescriptionArray_SplitArray[0].equalsIgnoreCase("VWC")) 
-								{
-									QSParam[loopcntr] = handle.Calculate_5TE_SDI12_VWC(QSParam[loopcntr]);
+							/* 5TE SDI12 Sensor Section */
+							else if ((ParameterDescriptionArray_SplitArray[1]
+									.equalsIgnoreCase("5TE"))) {
+								if (ParameterDescriptionArray_SplitArray[0]
+										.equalsIgnoreCase("VWC")) {
+									QSParam[loopcntr] = handle
+											.Calculate_5TE_SDI12_VWC(QSParam[loopcntr]);
 								}
-								// Electric Conductivity and Temperature do not need equations,however they need to have the sign removed.
-								else
-								{
-									QSParam[loopcntr]=QSParam[loopcntr].replace("+","");
+								// Electric Conductivity and Temperature do not
+								// need equations,however they need to have the
+								// sign removed.
+								else {
+									QSParam[loopcntr] = QSParam[loopcntr]
+											.replace("+", "");
 								}
-							}	
+							}
 
 							/* Other Sensors */
 							else {
