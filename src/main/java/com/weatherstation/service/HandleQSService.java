@@ -276,7 +276,7 @@ public class HandleQSService {
 		}
 		else
 		{
-			return "0.0";
+			return "Error= "+input;
 		}
 	}
 	
