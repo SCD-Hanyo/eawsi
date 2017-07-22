@@ -225,15 +225,14 @@ public class HandleQSService {
 			}
 			// This range has been removed because the sensor's maximum range is 50%. this equation was a "tagweda" from aboelfadl.
 			// if the input is not within the above ranges, then we set the output value to 50% (i.e. the maximum)
-			/*
+			// Range added tany 3ashan Omar yeb2a mabsoot
 			else if (inputdouble>=674 && inputdouble<=920)
 			{
 				vwc=((0.1874475/0.92)*inputdouble)-87.4475;																
 			}
-			*/
 			else
 			{
-				return "50";
+				return "100";
 			}
 
 			
