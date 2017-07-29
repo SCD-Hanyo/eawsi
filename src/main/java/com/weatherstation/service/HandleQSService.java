@@ -301,7 +301,7 @@ public class HandleQSService {
 			String single_input=String.valueOf(inputdouble);
 			String output=Calculate_SM_VH400(single_input);
 			return output;
-		}
+		} 
 		else
 		{
 			return "0.0";
