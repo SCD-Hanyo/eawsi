@@ -202,7 +202,47 @@ public class HandleQSService {
 		{			
 			double inputdouble=Double.parseDouble(input);
 			double vwc=0;
+			if (inputdouble>= 0 && inputdouble<=440)
+			{
+				vwc=((10*0.0025)*inputdouble)-1;
+				if (vwc<0)
+				{
+					vwc=0;
+				}
+			}
+
+			else if (inputdouble>440 && inputdouble<=520)
+			{
+				vwc=((25*0.0025)*inputdouble)-17.5;				
+			}
 			
+			else if (inputdouble>520 && inputdouble<=728)
+			{
+				vwc=((48.08*0.0025)*inputdouble)-47.5;								
+			}
+			
+			else if (inputdouble>728 && inputdouble<880)
+			{
+				vwc=((26.32*0.0025)*inputdouble)-7.89;												
+			}
+			else
+			{
+				return "50.1";
+			}
+
+			
+			vwc=((double)Math.round(vwc * 100) / 100);
+			String output=String.valueOf(vwc);
+			return output;
+		}
+		else
+		{
+			return "0.0";
+		}		
+
+			
+			
+			/* Original Equations, Invalid
 			if (inputdouble>= 0 && inputdouble<=337)
 			{
 				vwc=((0.03/0.92)*inputdouble)-1;
@@ -219,13 +259,16 @@ public class HandleQSService {
 			{
 				vwc=((0.14424/0.92)*inputdouble)-47.5;								
 			}
+			
+			
+			
 			else if (inputdouble>558 && inputdouble<674)
 			{
 				vwc=((0.07896/0.92)*inputdouble)-7.89;												
 			}
 			// This range has been removed because the sensor's maximum range is 50%. this equation was a "tagweda" from aboelfadl.
 			// if the input is not within the above ranges, then we set the output value to 50% (i.e. the maximum)
-			// Range added tany 3ashan Omar yeb2a mabsoot
+			// Range added tany 3ashan Omar yeb2a mabsoot			
 			else if (inputdouble>=674 && inputdouble<=920)
 			{
 				vwc=((0.1874475/0.92)*inputdouble)-87.4475;																
@@ -244,8 +287,11 @@ public class HandleQSService {
 		{
 			return "0.0";
 		}		
+		
+		*/
 	}
 	
+
 	public String Calculate_SM_VH400_Avg(String input) {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
