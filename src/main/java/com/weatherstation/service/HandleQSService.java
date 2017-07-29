@@ -296,7 +296,7 @@ public class HandleQSService {
 		boolean SingleValueNumeric=isNumeric(input);
 		if (SingleValueNumeric==true)
 		{
-			double inputdouble=Double.parseDouble(input);
+			double inputdouble=Double.parseDouble(input); 
 			inputdouble/=10;
 			String single_input=String.valueOf(inputdouble);
 			String output=Calculate_SM_VH400(single_input);
