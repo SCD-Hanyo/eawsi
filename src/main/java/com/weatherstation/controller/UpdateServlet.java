@@ -365,7 +365,7 @@ public class UpdateServlet extends HttpServlet {
 							else if ((ParameterDescriptionArray_SplitArray[1]
 									.equalsIgnoreCase("5TE"))) {
 								if (ParameterDescriptionArray_SplitArray[0]
-										.equalsIgnoreCase("VWC")) {
+										.contains("VWC")) {
 									QSParam[loopcntr] = handle
 											.Calculate_5TE_SDI12_VWC(QSParam[loopcntr]);
 								}
